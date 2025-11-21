@@ -7,7 +7,7 @@ It also serves as a personal high-level CP notebook designed for speed, clarity,
 
 ---
 
-# 🧠 Grandmaster-Level CP Advice  
+# 🧠 CP Advice  
 *(Used by ICPC World Finalists & Codeforces GMs)*
 
 ### ✔ Think Before You Code  
