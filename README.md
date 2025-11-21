@@ -54,7 +54,7 @@ Every mistake shows you something to fix — don't ignore it.
 Daily small practice beats rare long sessions.
 
 ## ✔ 13. Improvement Takes Time  
-Every strong competitor struggled at the start.  
+Everyone struggles at the start.  
 Stay patient, stay dedicated — and you will improve.
 
 ---
@@ -66,16 +66,25 @@ Stay patient, stay dedicated — and you will improve.
 This roadmap contains:
 
 - Level 1 → Fundamentals  
-- Level 2 → Core Competitive Programming  
+- Level 2 → Core CP Topics  
 - Level 3 → Advanced Algorithms & ICPC Training  
-- All topics in correct order  
+- All topics in proper order  
+- How to practice  
+- When to move to the next level  
 
-**Start here — this roadmap is the main guide.**
+**Start here — this is the main guide.**
 
 ---
 
 # 📚 Additional CP Resources  
-Use these resources for problemsets, explanations, and deeper training.
+
+> ⚠️ **Important:**  
+> Don’t get distracted by too many sources.  
+> Use **the roadmap first**, and treat these links as *optional support*:
+> - If you need **explanations**, use the teaching channels.  
+> - If you need **problems**, use the training groups.  
+> - If you need **contests**, use the CF groups.  
+> Choose what you need, not everything at once.
 
 ---
 
@@ -89,7 +98,7 @@ Beginner-friendly CP explanations and walkthroughs.
 
 ### 🔹 Level 2 Training Group — *Coach Mohamed Shareef*  
 https://codeforces.com/group/2y52k0YLhL  
-Covers essential topics like STL, Prefix Sum, and Binary Search.
+Covers essential basics: STL, Prefix Sum, Binary Search foundations.
 
 ### 🔹 PCPC Training — *Coach Abdelaziz*  
 https://vjudge.net/group/pcpc_training  
@@ -109,7 +118,7 @@ Advanced graph theory training.
 
 ### 🔹 GSG Level 3 — *Gaza Sky Geeks*  
 https://codeforces.com/group/0Bl9bdDUwH/contests  
-Covers strong topics: Graphs, DP, Number Theory, Segment Trees.
+Covers advanced areas: Graphs, DP, Number Theory, Segment Trees.
 
 ---
 
@@ -129,11 +138,11 @@ Covers strong topics: Graphs, DP, Number Theory, Segment Trees.
 Competitive Programming is built on:
 
 - clear thinking  
-- strong logic  
 - patience  
+- practice  
 - consistency  
-- and continuous learning  
+- strong logic  
+- and dedication  
 
-Keep practicing.  
-Keep improving.  
-Stay dedicated — and you will become strong. 🔥💪
+Stay focused, avoid distractions, and use the right resources at the right time.  
+If you stay consistent, you **will** become strong. 🔥💪
