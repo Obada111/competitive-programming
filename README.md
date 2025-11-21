@@ -69,7 +69,6 @@ This roadmap contains:
 - Level 2 → Core Competitive Programming  
 - Level 3 → Advanced Algorithms & ICPC Training  
 - All topics in correct order  
-- How to practice and when to progress  
 
 **Start here — this roadmap is the main guide.**
 
