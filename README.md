@@ -114,6 +114,12 @@ Large archive of categorized contests.
 https://vjudge.net/group/ppu-lvl3  
 group has problems graph (Advanced graph theory training).
 
+
+### 🔹 Mahmoud Ayman — Topic Explanations 
+https://www.youtube.com/playlist?list=PLIOhtFzqhbbGroes7my01e8x6GtP71Ah4
+Clear explanations for most CP topics.
+
+
 ### 🔹 GSG Level 3 — *Gaza Sky Geeks*  
 https://codeforces.com/group/0Bl9bdDUwH/contests  
 Covers advanced areas group for level 3 : Graphs, DP, Number Theory, Segment Trees.
