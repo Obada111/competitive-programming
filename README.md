@@ -67,10 +67,8 @@ This roadmap contains:
 
 - Level 1 → Fundamentals  
 - Level 2 → Core CP Topics  
-- Level 3 → Advanced Algorithms & ICPC Training  
+- Level 3 → Advanced Algorithms   
 - All topics in proper order  
-- How to practice  
-- When to move to the next level  
 
 **Start here — this is the main guide.**
 
