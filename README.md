@@ -86,43 +86,60 @@ This roadmap contains:
 
 ---
 
-### 🔹 Rokba Topic Sheets — *Coach Hazem*  
-https://vjudge.net/group/rokba  
-Well-structured sheets for core fundamentals.
-
 ### 🔹 CodeAcademy PPU — *PPU Official Club*  
 https://www.youtube.com/@CodeAcademy-ppu/videos  
-Beginner-friendly CP explanations and walkthroughs.
+Beginner-friendly explanations for fundamental and intermediate CP topics.
+
+### 🔹 Mahmoud Ayman — Topic Explanations  
+https://www.youtube.com/playlist?list=PLIOhtFzqhbbGroes7my01e8x6GtP71Ah4  
+Clear explanations for most major CP topics (graphs, DP, greedy, number theory, etc.).
+
+---
+
+### 🔹 Rokba Topic Sheets — *Coach Hazem*  
+https://vjudge.net/group/rokba  
+Well-structured topic sheets covering key foundational concepts.
 
 ### 🔹 Level 2 Training Group — *Coach Mohamed Shareef*  
 https://codeforces.com/group/2y52k0YLhL  
-Covers essential basics: STL, Prefix Sum, Binary Search foundations.
+Perfect for beginners learning STL, prefix sums, binary search, sorting, etc.
 
 ### 🔹 PCPC Training — *Coach Abdelaziz*  
 https://vjudge.net/group/pcpc_training  
-Strong ICPC-style sheets and problemsets.
+Strong ICPC-style practice sheets and problemsets.
+
+---
 
 ### 🔹 Mahmoud Ayman Topic Contests  
 https://codeforces.com/group/9QrbarK7qH/contests  
-Great topic-based contests for building skill.
+Great topic-focused CF contests to strengthen skills.
 
-### 🔹 Topic-Based CF Group  
+### 🔹 Topic-Based Codeforces Group  
 https://codeforces.com/group/isP4JMZTix/contests  
-Large archive of categorized contests.
+Large archive of categorized contests for structured practice.
+
+---
 
 ### 🔹 PPU Graph Sheets — *Coach Basel Ja'bari*  
 https://vjudge.net/group/ppu-lvl3  
-group has problems graph (Advanced graph theory training).
-
-
-### 🔹 Mahmoud Ayman — Topic Explanations 
-https://www.youtube.com/playlist?list=PLIOhtFzqhbbGroes7my01e8x6GtP71Ah4
-Clear explanations for most CP topics.
-
+Advanced graph problems: BFS, DFS, MST, DSU, Dijkstra, SCC, Bridges, LCA, and more.
 
 ### 🔹 GSG Level 3 — *Gaza Sky Geeks*  
 https://codeforces.com/group/0Bl9bdDUwH/contests  
-Covers advanced areas group for level 3 : Graphs, DP, Number Theory, Segment Trees.
+Advanced topics: Graphs, DP, Number Theory, Segment Trees, Binary Lifting.
+
+---
+
+### 🔹 ACPC / Arab Regional Contests Group  
+https://codeforces.com/group/Rilx5irOux/contests  
+Includes ACPC, PCPC, and many high-quality Arabic contests.
+
+---
+
+### 🔹 Training Tracker — Virtual CF Contests by Level  
+https://cp-training-tracker.vercel.app/training  
+Automatically creates virtual Codeforces contests based on *your level and handle*.  
+Perfect for guided, level-based practice.
 
 ---
 
