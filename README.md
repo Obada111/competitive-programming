@@ -112,11 +112,11 @@ Large archive of categorized contests.
 
 ### 🔹 PPU Graph Sheets — *Coach Basel Ja'bari*  
 https://vjudge.net/group/ppu-lvl3  
-Advanced graph theory training.
+group has problems graph (Advanced graph theory training).
 
 ### 🔹 GSG Level 3 — *Gaza Sky Geeks*  
 https://codeforces.com/group/0Bl9bdDUwH/contests  
-Covers advanced areas: Graphs, DP, Number Theory, Segment Trees.
+Covers advanced areas group for level 3 : Graphs, DP, Number Theory, Segment Trees.
 
 ---
 
