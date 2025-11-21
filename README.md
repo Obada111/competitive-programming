@@ -2,160 +2,229 @@
 
 Welcome to my Competitive Programming repository.
 
-This project contains structured templates, clean implementations, and topic-based algorithms used in ICPC, ACPC, PCPC, Codeforces, and AtCoder.  
-It also serves as a personal high-level CP notebook designed for speed, clarity, and real contest performance.
+This project contains structured templates, clean implementations, and essential algorithms used in ICPC, ACPC, PCPC, Codeforces, and AtCoder.  
+It is designed as a personal CP notebook — organized, fast, and built for long-term improvement.
 
 ---
 
-# 🧠 CP Advice  
-*(Used by ICPC World Finalists & Codeforces GMs)*
+# 🧠 Important CP Advice for Anyone Starting Competitive Programming
 
-### ✔ Think Before You Code  
-Typing fast is useless if your idea is wrong. Spend time understanding the structure first.
-
-### ✔ Small Cases Reveal the Truth  
-If a solution fails for n = 5, it will fail for n = 200000.
-
-### ✔ Complexity Awareness Is a Superpower  
-Read constraints → instantly know required algorithm.
-
-### ✔ Patterns Matter More Than Problems  
-Once you master a pattern, you gain the ability to solve hundreds of problems.
-
-### ✔ Upsolve Harder Than You Compete  
-The fastest improvement comes from the problems you *couldn’t* solve.
-
-### ✔ Build a Thought Process  
-Ask yourself:  
-“Is it binary search? DP? Graph? Greedy? Prefix? Math?”  
-Classification = half of the solution.
-
-### ✔ Practice Under Time Pressure  
-Contests build instincts no normal practice can.
-
-### ✔ Templates Save Minutes  
-And minutes decide contests.
-
-### ✔ Hard Problems Build You  
-One 1500-rated problem > ten 900-rated problems.
-
-### ✔ Review Every Mistake  
-A wrong answer is a lesson. A right answer is just a result.
-
-### ✔ Consistency Wins  
-Solve every day — improvement compounds.
+Competitive Programming is not about talent or memorizing code.  
+It is about **clear thinking**, **discipline**, and **consistent effort**.  
+These principles will help you grow faster and avoid common mistakes:
 
 ---
 
-# 📚 Competitive Programming Resources  
-*Each resource includes a short description AND its creator/trainer.*
+## ✔ 1. Think Before Writing Code  
+Strong programmers understand the problem deeply before typing anything.  
+Ask yourself:
+
+- What is the problem really asking?  
+- What is the structure behind it?  
+- What happens in simple and small cases?  
+
+Good thinking saves far more time than fast typing.
 
 ---
 
-## 🔥 Core Topic & Training Resources
+## ✔ 2. Always Start With Small Examples  
+Small cases (like n = 2, 3, 4) help you:
 
-### 🔹 Rokba Topic Sheets — *Created by Coach Hazem*  
-👉 https://vjudge.net/group/rokba  
-Structured topic sheets covering essential fundamentals.
+- understand logic  
+- find edge cases  
+- see patterns  
+- confirm or reject ideas  
+
+If an idea doesn’t work for a small input, it won’t work for a large one.
+
+---
+
+## ✔ 3. Care About Time Complexity  
+One of the most important skills in CP is understanding time complexity.  
+You must always check whether your approach fits the input constraints.  
+This is a key difference between beginners and advanced competitors.
+
+---
+
+## ✔ 4. Focus on Understanding, Not Memorizing  
+Every problem teaches you something:
+
+- how to think  
+- how to observe patterns  
+- how to break down logic  
+
+The goal is **developing problem-solving intuition**, not collecting answers.
+
+---
+
+## ✔ 5. Upsolve Problems You Couldn't Solve  
+Real improvement happens when you study and solve the problems you failed to solve in contests.  
+Upsolving helps you eliminate weaknesses and gain new insights.
+
+---
+
+## ✔ 6. Write Ideas and Patterns Down  
+Use pen and paper to:
+
+- test logic  
+- simulate steps  
+- identify transitions  
+- simplify observations  
+
+Writing clarifies thinking.
+
+---
+
+## ✔ 7. Build a Clear Problem-Solving Process  
+Before coding anything:
+
+1. Read carefully  
+2. Identify key observations  
+3. Analyze constraints  
+4. Test tiny examples  
+5. Form a plan  
+6. Then start coding  
+
+A structured mind is extremely powerful.
+
+---
+
+## ✔ 8. Practice in Real Contests  
+Contests build:
+
+- speed  
+- intuition  
+- accuracy  
+- confidence  
+
+Regular participation is essential for serious improvement.
+
+---
+
+## ✔ 9. Use a Clean and Reliable Template  
+A good template prevents:
+
+- repetitive mistakes  
+- slow typing  
+- unnecessary setup time  
+
+It helps you stay focused on problem-solving.
+
+---
+
+## ✔ 10. Challenge Yourself With Harder Problems  
+Difficult problems accelerate your growth.  
+Solving one tough problem often teaches more than ten easy ones.
+
+---
+
+## ✔ 11. Review Your Mistakes  
+Every mistake is a lesson.  
+Track what went wrong and why.  
+Fix the issue so it never happens again.
+
+---
+
+## ✔ 12. Stay Consistent  
+CP rewards consistency.  
+Solving a few problems every day is far more effective than solving many problems occasionally.
+
+---
+
+## ✔ 13. Improvement Takes Time  
+You will feel stuck, frustrated, or confused at times — this is normal.  
+Every strong competitor struggled at the beginning.  
+If you stay consistent, you will improve.
+
+---
+
+# 🌟 The Most Important Resource  
+### **📌 Complete CP Roadmap (for all levels)**  
+👉 https://www.notion.so/Roadmap-29cf4abdd6528065a1f4fb69db1ce9ac
+
+This roadmap includes:
+
+- Level 1, Level 2, and Level 3  
+- All topics in the correct learning order  
+**Start here — this roadmap already contains every topic you need.**
+
+---
+
+# 📚 Additional CP Resources  
+Use these resources for problemsets, explanations, and deeper training.  
+*(Your main guide should still be the Roadmap above.)*
+
+---
+
+### 🔹 Rokba Topic Sheets — *Coach Hazem*  
+https://vjudge.net/group/rokba  
+Well-structured sheets for core fundamentals.
 
 ### 🔹 CodeAcademy PPU — *PPU Official Club*  
-👉 https://www.youtube.com/@CodeAcademy-ppu/videos  
-Clear explanations and beginner-friendly video walkthroughs.
+https://www.youtube.com/@CodeAcademy-ppu/videos  
+Clear beginner-friendly explanations and walkthroughs.
 
-### 🔹 Level 2 Training Group — *Created by Coach Mohamed Shareef*  
-👉 https://codeforces.com/group/2y52k0YLhL  
-Covers STL, Prefix Sum, Binary Search basics, and foundational CP concepts.
+### 🔹 Level 2 Training Group — *Coach Mohamed Shareef*  
+https://codeforces.com/group/2y52k0YLhL  
+Covers essential basics: STL, Prefix Sum, Binary Search foundations.
 
-### 🔹 PCPC Training — *Led by Coach Abdelaziz*  
-👉 https://vjudge.net/group/pcpc_training  
-High-quality ICPC-style sheets, contests, and problem collections.
+### 🔹 PCPC Training — *Coach Abdelaziz*  
+https://vjudge.net/group/pcpc_training  
+High-quality ICPC-style sheets and contests.
 
-### 🔹 Mahmoud Ayman — Topic Contests  
-👉 https://codeforces.com/group/9QrbarK7qH/contests  
-Organized topic contests with excellent problem selection.
+### 🔹 Mahmoud Ayman Topic Contests  
+https://codeforces.com/group/9QrbarK7qH/contests  
+Organized topic contests for strong practice.
 
-### 🔹 Topic-Based CF Group (General)  
-👉 https://codeforces.com/group/isP4JMZTix/contests  
-Large archive of CF contests categorized by algorithmic topics.
+### 🔹 Topic-Based CF Group  
+https://codeforces.com/group/isP4JMZTix/contests  
+Large archive of categorized contests.
 
-### 🔹 PPU Graph Sheets — *Created by Coach Basel Ja'bari*  
-👉 https://vjudge.net/group/ppu-lvl3  
-Specialized graph training: BFS, DFS, MST, DSU, LCA, Bridges, SCC.
+### 🔹 PPU Graph Sheets — *Coach Basel Ja'bari*  
+https://vjudge.net/group/ppu-lvl3  
+Advanced graph training and classic algorithms.
 
-### 🔹 GSG Level 3 Program (Graphs, DP, NT, Segment Tree) — *Gaza Sky Geeks*  
-👉 https://codeforces.com/group/0Bl9bdDUwH/contests  
-Advanced training used in the official GSG CP curriculum.
-
----
-
-## 🔥 ICPC-Level & Advanced Resources
-
-### 🔹 Arab ICPC / ACPC / PCPC Archive  
-👉 https://codeforces.com/group/Rilx5irOux/contests  
-Real regional contests — excellent for advanced training.
-
-### 🔹 NCDuy Competitive Programming Topic Handbook  
-👉 https://ncduy0303.github.io/Competitive-Programming/  
-One of the best structured CP roadmaps in the world.
-
-### 🔹 Competitive Programmer’s Handbook (CSES PDF)  
-👉 https://cses.fi/book/book.pdf  
-Complete CP fundamentals with excellent explanations.
+### 🔹 GSG Level 3 — *Gaza Sky Geeks Program*  
+https://codeforces.com/group/0Bl9bdDUwH/contests  
+Covers advanced areas: DP, Number Theory, Graph Theory, Segment Trees.
 
 ---
 
-## 🌐 Universal Resources (Useful for All Levels)
+# 🌍 Global Competitive Programming Resources
 
-### 🔹 YouKnowWho Academy — Topic Lists  
-👉 https://youkn0wwho.academy/topic-list  
-Massive categorized problem sources from multiple platforms.
+### Codeforces  
+https://codeforces.com
 
-### 🔹 CP Training Tracker — Virtual CF Contests Based on Rating  
-👉 https://cp-training-tracker.vercel.app/training  
-Generates targeted virtual contests based on your skills and weaknesses.
+### AtCoder  
+https://atcoder.jp
 
-### 🔹 Sublime Text CP Setup — *Explained by Coach Basel Ja'bari*  
-👉 https://www.youtube.com/watch?v=HolN4POu_jo  
-Guide to configuring Sublime Text as a fast CP IDE.
+### CSES Problemset  
+https://cses.fi/problemset
 
----
+### USACO Guide  
+https://usaco.guide
 
-# 🌍 Additional Global CP Resources
+### CP-Algorithms  
+https://cp-algorithms.com
 
-### 🔹 Codeforces  
-👉 https://codeforces.com  
-Primary platform for CP contests, problemsets, and blogs.
-
-### 🔹 AtCoder  
-👉 https://atcoder.jp  
-High-quality problems with clean statements.
-
-### 🔹 CSES Problemset  
-👉 https://cses.fi/problemset  
-One of the best structured training problemsets.
-
-### 🔹 USACO Guide  
-👉 https://usaco.guide  
-Excellent explanations for various algorithmic topics.
-
-### 🔹 CP-Algorithms (E-maxx Translation)  
-👉 https://cp-algorithms.com  
-The #1 encyclopedia for CP algorithms and techniques.
-
-### 🔹 VisuAlgo  
-👉 https://visualgo.net/en  
-Algorithm visualizations for understanding complex structures.
+### VisuAlgo  
+https://visualgo.net/en
 
 ---
 
 # 🔥 Final Message
 
-Competitive Programming is not about memorizing code.  
-It is about **thinking deeply, mastering patterns, and training consistently**.
+Competitive Programming is built on:
 
-This repository collects the essential tools, templates, and resources to help you grow fast and effectively.
+- clear thinking  
+- patience  
+- practice  
+- consistency  
+- strong logic  
+- and dedication  
 
-Keep solving.  
-Keep improving.  
-Keep pushing your limits.  
-You’re becoming a true CP machine. 🔥💪
+Keep learning.  
+Keep practicing.  
+Keep improving.
+
+If you stay consistent, you **will** become strong. 🔥💪
