@@ -1,87 +1,97 @@
-## 🧠 Competitive Programming Tips (Must-Read)
+# 🚀 Competitive Programming Notes & Templates
 
-If you are starting your competitive programming journey, here are essential tips used by top CP developers:
+Welcome to my Competitive Programming repository.  
+Here you will find clean implementations of core CP topics, templates, and classic algorithms used in contests such as ICPC, PCPC, ACPC, Codeforces, and AtCoder.
+
+This repo also acts as my personal CP notebook → containing important topics, solutions, and patterns that repeat in many problems.
+
+---
+
+## 🧠 Essential CP Thinking Tips (Must-Read)
+
+These thinking tips are used by many top competitive programmers. Before solving any problem, keep these in mind:
 
 ### ✔️ Think Before Coding
-Spend real time understanding the problem. Avoid jumping to code immediately — think on paper first.
+Most bugs come from misunderstanding the problem.  
+Read twice, think carefully, then start coding.
 
 ### ✔️ Test Small Cases
-Try simple examples to detect patterns, edge cases, and structure before coding.
+Use tiny examples to detect patterns, corner cases, and transitions.
 
-### ✔️ Identify Constraints
-Determine the required time complexity:
-- N = 1e5 → think O(n log n)
-- N = 1e6 → think O(n)
-- Large single queries (like checking if n is prime up to 1e12) → use O(sqrt(n)) primality test, not sieve
+### ✔️ Understand the Constraints
+- If `N = 1e5` → your solution should be `O(n log n)` or `O(n)`  
+- If the input is a single number up to `1e12` → use `O(sqrt(n))` primality test, **not** sieve  
+- Always match complexity with limits
 
 ### ✔️ Break Problems Into Subproblems
-Many problems have patterns like:
-- prefix/suffix operations  
+Look for patterns:
+- prefix/suffix ideas  
+- binary search  
+- greedy structure  
+- dp states  
 - two pointers  
-- monotonic search  
-- binary search on answer  
-- classic DP transitions  
-
-### ✔️ Avoid Copying Solutions Blindly
-Always understand the core idea behind any solution you read.
-
-### ✔️ If You Get Stuck
-Leave the code, think on paper, reason about constraints, and try to identify structure.
+- graph traversal  
 
 ### ✔️ Learn Patterns, Not Problems
-You don’t solve thousands of problems —  
-you solve **hundreds of patterns** that repeat in different forms.
+CP is not about solving 5000 random problems.  
+It's about learning patterns that repeat.
 
-### ✔️ Be Consistent
-Solve at least 3–5 problems per day. Consistency beats everything.
+### ✔️ Do Not Copy Solutions Blindly
+Understanding > Copying  
+Make sure you know *why* the solution works.
+
+### ✔️ Keep Your Own Notes
+Write your own observations, templates, and mistakes.  
+This repo’s `/topics` folder acts as a personal CP notebook.
+
+### ✔️ Stay Consistent
+Solve problems daily, even 3–5 per day.  
+Consistency beats talent.
 
 ### ✔️ Participate in Contests
-Compete regularly on Codeforces & AtCoder. Pressure training improves your intuition and speed.
-
-### ✔️ Maintain Your CP Notebook
-Keep your own notes for:
-- templates  
-- common techniques  
-- tricky patterns  
-- mistakes  
-This repo’s `/topics` folder can act as your own CP notebook.
-
+AtCoder + Codeforces improve speed, accuracy, and contest intuition.
 
 ---
 
 ## 📚 Topic-Based Problem Sets (Highly Recommended)
 
-Here are curated topic lists created by top coaches and used widely in CP training:
+These are curated sets used by strong coaches and ICPC teams across the Arab region and globally.
 
-### 🔹 1) Rokba — Full Topic Sheets by Coach Hazem
-A complete structured set of topics for beginners & intermediate levels.  
+### 🔹 1) Rokba — Full Topic Sheets by Coach Hazem  
+Complete beginner → intermediate topic list  
 👉 https://vjudge.net/group/rokba
 
-### 🔹 2) PPU Level 3 — Graph Training by Basil Ja'bari
-High-quality graph sheets covering BFS, DFS, MST, DSU, LCA, bridges, and more.  
+### 🔹 2) PPU Level 3 — Graph Training by Basil Ja'bari  
+Advanced graph problems: BFS, DFS, MST, DSU, LCA, bridges, SCC…  
 👉 https://vjudge.net/group/ppu-lvl3
 
-### 🔹 3) PCPC Training — Sheets and Gym Sets by Coach Abdelaziz (Egypt)
-A very strong collection of problem sheets & ICPC-style practice.  
+### 🔹 3) PCPC Training — Sheets & Gym Sets by Coach Abdelaziz  
+Strong topic sheets + ICPC-style practice  
 👉 https://vjudge.net/group/pcpc_training
 
-### 🔹 4) NCDuy Competitive Programming Handbook (Topic List Website)
-A full topic roadmap, almost everything in CP explained and categorized.  
+### 🔹 4) Arab ICPC / ACPC / PCPC Contest Archive (Codeforces Group)  
+Includes ACPC qualifiers, PCPC contests, training rounds, Arab regionals  
+👉 https://codeforces.com/group/Rilx5irOux/contests
+
+### 🔹 5) NCDuy Competitive Programming Topic List (Interactive Handbook)  
+One of the most organized CP topic roadmaps  
 👉 https://ncduy0303.github.io/Competitive-Programming/
 
-### 🔹 5) YouKnowWho Academy — Topic Lists and Problem Sources
-A massive directory of topic-based problem sources and coding lists.  
+### 🔹 6) YouKnowWho Academy — Topic Lists & Problem Sources  
+A massive directory of categorized CP topics  
 👉 https://youkn0wwho.academy/topic-list
 
-### 🔹 6) Competitive Programmer’s Handbook (Book PDF)
-One of the best CP books worldwide — used in CSES & ICPC training.  
+### 🔹 7) Competitive Programmer’s Handbook (Book PDF) — CSES  
+A world-class CP book used in ICPC training  
 👉 https://cses.fi/book/book.pdf
-
 
 ---
 
-## 🚀 Final Advice  
-Competitive Programming isn't about being a genius —  
-it's about **thinking clearly**, **learning patterns**, and **being consistent**.
+## 🎯 Final Advice
 
-Keep pushing, keep learning, and you'll become a real CP monster. 🔥
+Competitive Programming is not about being smart —  
+it's about *clear thinking*, *pattern recognition*, and *consistent practice*.
+
+If you put in the work, you will become a real CP monster. 🔥💪
+
+Good luck ❤️  
