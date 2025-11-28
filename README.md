@@ -2,7 +2,7 @@
 # 🚀 Competitive Programming Notebook & Topic Library
 
 Welcome to my **Competitive Programming Notebook**.  
-This repository is where I collect the algorithms, templates, and ideas that I actually use in contests (ICPC/ACPC/PCPC, Codeforces, AtCoder, etc.).
+This repository is where I collect the algorithms, templates, and ideas that I actually use in contests.
 
 The goal of this repo is **not** to be a textbook.  
 It is a *battle-tested toolbox* that I keep improving as I solve more problems.
