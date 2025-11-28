@@ -9,7 +9,76 @@ It is a *battle-tested toolbox* that I keep improving as I solve more problems.
 
 ---
 
-## 📂 Repository Structure
+## 📘 How to Use This Notebook
+
+This README is designed so that **different people can get value quickly**:
+
+- 🟢 **If you are a beginner**  
+  Follow the **Reading Roadmap** below, start from the basics, and use the links in the *Quick Navigation* to jump to each topic.
+
+- 🔵 **If you are an experienced competitive programmer**  
+  Use the **Quick Navigation / Topic Index** to jump directly to the topic you care about (Segment Tree, DSU, Dijkstra, etc.).
+
+- 🟣 **If you are a recruiter / interviewer**  
+  The `topics/` folder plus this README show how I organize my CP knowledge:  
+  clean implementations, clear mental models, and notes about pitfalls from real problems I solved.
+
+---
+
+## 🗺️ Reading Roadmap (Recommended Order)
+
+```mermaid
+graph LR
+  A[Start Here] --> B(Basics & Implementation)
+  B --> C(Prefix Sums & Frequency Arrays)
+  C --> D(Binary Search & Two Pointers)
+  D --> E(Graph Basics: BFS & DFS)
+  E --> F(Shortest Paths & MST: Dijkstra, DSU, Kruskal)
+  F --> G(Dynamic Programming: LIS & CIS)
+  G --> H(Data Structures: Square Root Decomposition)
+  H --> I(Segment Tree & Advanced Range Queries)
+```
+
+**Suggested workflow** for each topic:
+
+1. Jump to the topic section from the **Quick Navigation** below.  
+2. Read the short conceptual explanation + pitfalls.  
+3. Open the corresponding file in `topics/` (for example `topics/segment tree max.cpp`).  
+4. Practice problems on Codeforces / CSES using the external resources in the later sections.
+
+---
+
+## 📚 Quick Navigation (Topic Index)
+
+> Click a link to jump directly to the section you want.
+
+### Repository & Overview
+
+- [Repository Overview](#-repository-overview)
+- [Prefix Sums (1D & 2D)](#-1d--2d-prefix-sums)
+- [Frequency Arrays](#-frequency-arrays)
+- [Binary Exponentiation](#-binary-exponentiation)
+- [Binary Search](#-binary-search-classic)
+- [Two Pointers](#-two-pointers)
+- [Bitmask / Recursive Subsets](#-bitmask-subsets--recursive-subsets)
+- [Prime Sieve & Fast isPrime](#-sieve-of-eratosthenes--fast-isprime)
+- [Graph Traversal (BFS & DFS)](#-graph-traversal-bfs--dfs)
+- [Dijkstra’s Algorithm](#-dijkstras-algorithm)
+- [Disjoint Set Union (DSU)](#-disjoint-set-union-dsu)
+- [Kruskal’s MST](#-kruskals-algorithm-minimum-spanning-tree)
+- [Dynamic Programming: LIS & CIS](#-dynamic-programming-lis--cis)
+- [Square Root Decomposition](#-square-root-decomposition)
+- [Segment Tree](#-segment-tree-range-maximum-query--point-update)
+- [Contest Templates](#-two-classic-templates-included)
+- [Global CP Resources](#-recommended-global-cp-resources)
+- [Arabic / Local CP Resources](#-arabic--local-cp-resources-i-use)
+- [Beginner Advice](#-advice-for-beginners-starting-cp)
+- [Advanced / Recruiter Notes](#-advice-for-advanced-cp-practitioners--recruiters)
+- [Final Message](#-final-message)
+
+---
+
+## 📂 Repository Overview
 
 ```text
 .
@@ -41,7 +110,7 @@ Each file is written with **contest usage** in mind: clean, iterative where poss
 
 ---
 
-## 🧠 How I Treat Competitive Programming
+## 🧠 How I Think About Competitive Programming
 
 Competitive Programming, for me, is about three things:
 
@@ -51,18 +120,18 @@ Competitive Programming, for me, is about three things:
 
 Some personal principles I try to follow:
 
-- **Think before you code.** I always try a few small examples on paper before touching the keyboard.
+- **Think before you code.** Try small examples on paper before touching the keyboard.
 - **Respect the constraints.** Time and memory limits tell you almost everything about the intended solution.
 - **Upsolve seriously.** If I couldn’t solve it in a contest, I write down *why*, and I update this notebook if a new idea is useful.
 - **Small daily habits > random long sessions.** 30–60 minutes every day beats 6 hours once a week.
 
 ---
 
-## 🧩 Visual Overview of the Topics
+## 🧭 Topic Map (High-Level Visual)
 
 ```mermaid
 graph TD
-  A[Basics] --> B[Prefix Sums]
+  A[Core Basics] --> B[Prefix Sums]
   A --> C[Frequency Arrays]
   A --> D[Binary Search]
   A --> E[Two Pointers]
@@ -82,9 +151,7 @@ graph TD
   P --> R[DP CIS]
 ```
 
-This README gives a **short conceptual explanation, pitfalls, and usage notes** for each topic that you’ll find in `topics/`.
-
-> All implementations are in **C++17** and written for competitive environments.
+This map is a rough mental model of how these topics connect in real CP problems.
 
 ---
 
@@ -95,7 +162,7 @@ This README gives a **short conceptual explanation, pitfalls, and usage notes** 
 - Fast range sum queries in arrays and grids.
 - Typical use cases:
   - `sum(l..r)` in `O(1)` after `O(n)` preprocessing.
-  - 2D rectangles queries in `O(1)` after `O(n*m)` preprocessing.
+  - 2D rectangular queries in `O(1)` after `O(n * m)` preprocessing.
 
 ### Core Idea (1D)
 
@@ -121,16 +188,16 @@ sum(x1..x2, y1..y2) =
 + pref[x1-1][y1-1];
 ```
 
-### Pitfalls I Had (and How I Fixed Them)
+### Pitfalls I Hit (and How I Fixed Them)
 
-- **Off-by-one errors**: I now always use **1-based indexing** for prefix arrays.
-- **Overflow**: never store prefix sums in `int` when values or `n` are large. Use `long long`.
-- **Mixing inclusive/exclusive ranges**: I write the formula on paper *every time* before implementing.
+- **Off-by-one errors** → I now always use **1-based indexing** for prefix arrays and keep `pref[0] = 0`.
+- **Overflow** → never store prefix sums in `int` when values or `n` are large. I use `long long`.
+- **Inclusive/exclusive confusion** → I write the formula on paper every time before implementing.
 
-### When to Reach for Prefix Sums
+### When to Use
 
-- You see many queries of type `sum(l,r)` or `sum over sub-rectangle`.
-- Updates are rare or nonexistent (otherwise use BIT / Segment Tree).
+- Many queries of type `sum(l,r)` or `sum over sub-rectangle`.
+- Updates are rare or nonexistent (otherwise a BIT or Segment Tree is usually better).
 
 ---
 
@@ -140,14 +207,14 @@ Used for counting occurrences in a **small value range** (like values ≤ 1e6 or
 
 ### Typical Usage
 
-- Counting frequencies, checking if two strings are anagrams, counting pairs with some condition, etc.
+- Counting frequencies, checking if two strings are anagrams, counting pairs with conditions, etc.
 - Often used as a simple alternative to maps when the coordinate range is small.
 
 ### Common Mistakes
 
 - **Not resetting** the frequency array between test cases.
 - Using an array that is **too small** for the maximum value.
-- Forgetting that indexing from `0` vs `1` changes the count positions.
+- Confusing 0-based vs 1-based indexing.
 
 To avoid bugs, I explicitly write:
 
@@ -155,13 +222,13 @@ To avoid bugs, I explicitly write:
 vector<int> freq(MAXV + 1, 0);
 ```
 
-and clear only the indices I used when constraints are tight.
+and clear only the indices I actually used when constraints are tight.
 
 ---
 
 ## ⚡ Binary Exponentiation
 
-Fast exponentiation in `O(log exp)` time instead of `O(exp)`.
+Fast exponentiation in `O(log exp)` instead of `O(exp)`.
 
 ### Key Use Cases
 
@@ -185,22 +252,22 @@ long long binpow(long long a, long long e, long long mod) {
 
 ### Pitfalls
 
-- Forgetting to do `a %= mod` at the start.
-- Using `int` when values can exceed `2^31-1`.
-- For non-modular pow, overflow can kill your solution silently.
+- Forgetting `a %= mod` at the start.
+- Using `int` where `long long` is needed.
+- For non-modular pow, silent overflow if you’re not careful with limits.
 
 ---
 
 ## 🔍 Binary Search (Classic)
 
-Whenever the answer is **monotonic** (true/false as we move), I try binary search first.
+Whenever the answer is **monotonic** (true/false as we move), I consider binary search first.
 
 ### Typical Patterns
 
-- Search on **values** (answer) – e.g. minimum `x` satisfying a condition.
+- Search on **values** (answer) – e.g. minimum `x` satisfying a condition `good(x)`.
 - Search on **index** in sorted arrays.
 
-### My Standard Template (on Answer Space)
+### Standard Template (on Answer Space)
 
 ```cpp
 long long lo = L, hi = R, ans = R;
@@ -217,42 +284,43 @@ while (lo <= hi) {
 
 ### Common Traps
 
-- Infinite loops due to `mid` computation errors.
+- Infinite loops due to wrong `mid` computation or update.
 - Wrong initial bounds `L`, `R`.
-- Condition `good(mid)` not actually monotonic.
+- `good(mid)` not actually monotonic.
 
-I try a few manual checks like `good(L)` and `good(R)` before coding.
+I usually manually check `good(L)` and `good(R)` before coding the search.
 
 ---
 
 ## 🪢 Two Pointers
 
-Two indices that move over an array while maintaining a **window invariant**.  
-Perfect for:
+Two indices that move over an array while maintaining a **window invariant**.
+
+### Where I Use It
 
 - Longest subarray with some property (sum ≤ X, distinct count ≤ K, etc.).
 - Merging sorted arrays.
-- Sliding window problems.
+- Sliding window problems over strings or arrays.
 
-### Key Mindset
+### Mindset
 
 - Maintain some state for the current window `[l, r)`.
-- Move `r` forward to expand, move `l` forward to shrink when invariant breaks.
+- Move `r` forward to expand, move `l` forward to shrink when the invariant breaks.
 
 ### Frequent Bugs
 
-- Off-by-one: is the window `[l, r]` or `[l, r)`? I choose one and stick to it.
+- Off-by-one: is the window `[l, r]` or `[l, r)`? I decide once and stay consistent.
 - Forgetting to update the answer after moving `l`.
-- Updating the frequency/state in the wrong order.
+- Updating the frequency/state in the wrong order, causing negative counts.
 
 ---
 
 ## 🧮 Bitmask Subsets & Recursive Subsets
 
-These files contain two ways to iterate over subsets:
+Two standard ways to iterate over subsets:
 
 1. **Bitmask enumeration** – good when `n ≤ 20`.
-2. **Recursive generation** – clearer to think about, especially when you need to maintain some extra state.
+2. **Recursive generation** – clearer when you need to maintain extra state.
 
 ### Bitmask Pattern
 
@@ -263,9 +331,9 @@ for (int mask = 0; mask < (1 << n); ++mask) {
 }
 ```
 
-### My Notes
+### Notes
 
-- I always check constraints: if `n > 20–22`, full subset enumeration is usually too big.
+- Always check constraints: if `n > 20–22`, full subset enumeration is usually too big.
 - Many DP-on-subset tricks start from this basic enumeration.
 
 ---
@@ -274,23 +342,17 @@ for (int mask = 0; mask < (1 << n); ++mask) {
 
 ### Sieve
 
-Precompute primes up to `N` in `O(N log log N)` time.
-
-Used for:
-
-- Prime queries.
-- Factorization using smallest prime factor (SPF).
-- Number-theory problems where multiple prime operations are needed.
+Precomputes primes up to `N` in `O(N log log N)` time. Great for multiple prime queries and factorization tasks. citeturn1search29
 
 ### `isPrime`
 
-For single checks with `x` up to around `1e9`, a simple trial division up to `sqrt(x)` with optimizations is usually enough.
+For single checks up to around `1e9`, a simple trial division up to `sqrt(x)` can be enough when used carefully.
 
-### Pitfalls
+### Typical Pitfalls
 
-- Not handling `0` and `1` correctly (they are not prime).
-- Using `int` where `long long` is needed in multiplication.
-- Forgetting that building the sieve itself takes time and memory.
+- Handling `0` and `1` incorrectly (they are *not* prime).
+- Using `int` where `long long` is needed for `i * i` or `mid * mid`.
+- Forgetting the memory cost of very large sieves.
 
 ---
 
@@ -301,13 +363,7 @@ For single checks with `x` up to around `1e9`, a simple trial division up to `sq
 Used for:
 
 - Shortest path in **unweighted** graphs.
-- Level-by-level exploration.
-
-![BFS tree](https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Breadth-first_tree.svg/350px-Breadth-first_tree.svg.png)
-
-> Visualization of BFS tree levels (source: Wikimedia Commons).
-
-Typical BFS skeleton:
+- Level-by-level exploration and distance layers. citeturn1search22
 
 ```cpp
 vector<vector<int>> g(n);
@@ -334,31 +390,31 @@ Used for:
 
 - Connected components.
 - Topological sort.
-- Detecting cycles, bridges, articulation points (with extensions).
+- Detecting cycles, bridges, articulation points (with extra logic).
 
-I usually use iterative DFS when recursion depth might explode, but for most contest constraints recursive DFS is fine with tail optimizations or manual stack tuning.
+I use recursive DFS for most problems, and switch to an explicit stack when recursion depth might be too large.
 
-### Typical Mistakes
+### Common Mistakes
 
-- Forgetting to reset `visited` / `dist` arrays between test cases.
+- Not resetting `visited` / `dist` between test cases.
 - Building edges in the wrong direction in directed graphs.
-- For BFS: pushing nodes multiple times because you mark them as visited *after* pushing instead of before.
+- For BFS: pushing nodes multiple times because you mark them as visited *after* pushing.
 
 ---
 
 ## 🧭 Dijkstra’s Algorithm
 
-Shortest path in graphs with **non-negative edge weights**.
+Shortest path in graphs with **non-negative edge weights**. citeturn1search0
 
 ### Complexity
 
 - Using a binary heap (`priority_queue` in C++): `O((n + m) log n)`.
 
-### Things I Pay Attention To
+### Key Details
 
-- All edge weights must be **≥ 0**, otherwise I switch to Bellman-Ford or other algorithms.
-- Use `long long` for distance; adding weights can overflow `int` easily.
-- I often store edges as `{to, weight}` pairs in adjacency lists.
+- All edge weights must be **≥ 0**; otherwise, consider Bellman-Ford or other algorithms.
+- Use `long long` for distances to avoid overflow.
+- Store edges as `{to, weight}` pairs in adjacency lists.
 
 ```cpp
 using P = pair<long long,int>;
@@ -384,43 +440,43 @@ while (!pq.empty()) {
 
 ## 🧩 Disjoint Set Union (DSU)
 
-`DSU.cpp` implements **Union–Find** with path compression and union by size/rank.
+`DSU.cpp` implements **Union–Find** with path compression and union by size/rank. citeturn1search0
 
 ### Where I Use DSU
 
 - Connecting components in graphs.
 - Kruskal’s MST.
-- Offline queries (“add edges, then answer if two vertices are connected”).
+- Offline connectivity queries.
 
-### Key Operations
+### Core Operations
 
 - `find_set(v)` – returns representative of the component.
 - `union_sets(a, b)` – merges two components if they are different.
 
 ### Pitfalls from Practice
 
-- Forgetting to compress paths: without it, complexity becomes too slow on big tests.
-- Using recursion in `find_set` with extremely deep trees (iterative version can be safer in weird corner cases).
-- Mixing 0-based and 1-based vertex indexing in DSU arrays.
+- Forgetting path compression → DSU becomes too slow on big test cases.
+- Recursion depth in weird, adversarial trees → iterative `find_set` can be safer.
+- Mixing 0-based and 1-based indices in DSU arrays.
 
-I always test DSU with a tiny custom example before trusting it in a harder problem.
+I usually test DSU with a tiny hand-crafted example before trusting it in a harder problem.
 
 ---
 
 ## 🌉 Kruskal’s Algorithm (Minimum Spanning Tree)
 
-`Kruskal MST.cpp` combines **sorting edges + DSU**.
+`Kruskal MST.cpp` combines **sorting edges + DSU**. citeturn1search0
 
 ### Steps
 
 1. Sort edges by weight.
-2. For each edge `(u, v, w)` in ascending weight:
-   - If `find_set(u) != find_set(v)` → take this edge, `union_sets(u, v)`.
+2. For each edge `(u, v, w)` in ascending order:
+   - If `find_set(u) != find_set(v)` → take this edge and `union_sets(u, v)`.
 
 ### Notes
 
-- Works only when the graph is undirected and connected (or gives MST forest otherwise).
-- Perfect example of how DSU turns a conceptually simple algorithm into an efficient one.
+- Works on undirected graphs; gives an MST (or forest if the graph isn’t fully connected).
+- Great example of a greedy algorithm + DSU.
 
 ---
 
@@ -431,57 +487,57 @@ I always test DSU with a tiny custom example before trusting it in a harder prob
 I keep both:
 
 - `O(n^2)` DP for clarity.
-- `O(n log n)` patience sorting style approach for real contest usage.
+- `O(n log n)` patience sorting–style version for real contests.
 
-Main applications:
+Applications:
 
-- Sequence analysis, DP optimizations, reducing 2D problems to 1D LIS, etc.
+- Sequence analysis, DP optimizations, and reducing 2D problems to 1D LIS.
 
 ### `DP CIS.cpp` – Common Increasing Subsequence
 
-This is the **Longest Common Increasing Subsequence** between two arrays/strings.
+The **Longest Common Increasing Subsequence** between two arrays/strings.
 
 - Combines ideas from **LCS** and **LIS**.
-- Time complexity is usually higher than plain LIS; often `O(n^2 log n)` or similar depending on approach.
+- Typically heavier complexity than standard LIS.
 
-### What I Learned Working on LIS/CIS
+### Lessons Learned
 
-- For LIS, the `tails` array invariant is extremely powerful, but easy to mess up if you don’t understand the logic behind it.
-- These problems train you to think about **states** and **transitions** very carefully.
+- For LIS, understanding the invariant of the `tails` array is crucial.
+- These problems train careful thinking about **states** and **transitions**, which generalizes to many other DP problems. citeturn1search10
 
 ---
 
 ## 📦 Square Root Decomposition
 
-`Square Root Decomposition.cpp` implements a decomposition of the array into blocks of size ≈ `sqrt(n)`.
+`Square Root Decomposition.cpp` partitions the array into blocks of size ≈ `sqrt(n)`.
 
 ### Use Cases
 
-- Range queries with point updates when segment tree feels “too heavy”.
-- Problems where `n` and `q` are around `1e5` and constraints are relaxed a bit.
+- Range queries + point updates when segment tree is overkill.
+- `n` and number of queries around `1e5` with less strict time limits.
 
-### Typical Layout
+### Pattern
 
 - Block size `B = floor(sqrt(n))`.
-- Each block keeps some aggregate (sum, min, max, frequency, …).
+- Each block stores an aggregate (sum, min, max, frequency, …).
 
 ### Trade-offs
 
-- Simpler to implement than segment tree.
-- Usually slower but sometimes more than enough for contest constraints.
+- Easier to implement than a segment tree.
+- Usually slower, but absolutely fine for many practical constraints.
 
 ---
 
 ## 🌲 Segment Tree (Range Maximum Query + Point Update)
 
-`segment tree max.cpp` implements a classic **iterative** or **recursive** segment tree that supports:
+`segment tree max.cpp` implements a classic tree over array segments. citeturn1search9turn1search28
+
+### What It Supports
 
 - Range maximum query in `O(log n)`.
 - Point update in `O(log n)`.
 
-### High-Level Concept
-
-We build a binary tree over array indices; each node covers a range `[l, r]` and stores the maximum on that segment.
+### Visual Structure
 
 ```mermaid
 graph TD
@@ -493,64 +549,164 @@ graph TD
   C --> G[7..8]
 ```
 
-### Things I Pay Attention To
+Each node stores information about a segment `[l, r]`. We merge children to get the parent value (e.g., `max(left, right)` for range maximum).
+
+### Implementation Notes
 
 - Neutral element for maximum is `-INF`, for sum is `0`, etc.
-- Take care to avoid mixing **0-based** and **1-based** indices.
-- For heavy updates or lazy range updates, I extend this implementation with **lazy propagation**.
+- Be consistent with indexing (0-based vs 1-based).
+- For heavy range updates, I extend the base implementation with **lazy propagation**.
 
-Segment trees are one of the core tools that separate mid-level from advanced competitive programmers.
+Segment trees are one of the main structures that distinguish intermediate from advanced competitive programmers.
 
 ---
 
 ## 🚦 Two Classic Templates Included
 
-- `template1.cpp` – more compact, for speed in contests.
-- `template2.cpp` – slightly more verbose, good for debugging and learning.
+- `template1.cpp` – compact template for fast writing in contests.
+- `template2.cpp` – slightly more verbose and easier to debug.
 
 Both include:
 
 - Fast I/O setup.
 - Common typedefs and helper functions.
-- Debug macros that I can disable with a single flag when submitting.
+- Debug macros that can be disabled with a single flag when submitting.
 
 ---
 
-## 📚 Recommended External Resources
+## 📚 Recommended Global CP Resources
 
-I constantly refer to a few high-quality resources while learning and practicing:
+These are the primary global references I rely on and recommend strongly:
 
-- **CP-Algorithms** – encyclopedia of algorithms used in CP.  
+- **CP-Algorithms** – open-source encyclopedia of algorithms and data structures used in CP. citeturn1search0turn1search24  
   <https://cp-algorithms.com/>
-- **USACO Guide – CP Resources** – curated list of books, websites, and problem sets.  
+- **USACO Guide – General CP Resources** – curated list of books, judges, and practice tips. citeturn1search1turn1search20  
   <https://usaco.guide/general/resources-cp>
-- **CSES Problemset** – clean, well-structured problemset for building fundamentals.  
+- **CSES Problem Set** – a comprehensive, high-quality problem set for learning algorithms. citeturn1search2turn1search7turn1search12  
   <https://cses.fi/problemset/>
-- **Codeforces** – main platform I use for contests & virtual participation.  
+- **Codeforces** – my main contest platform and source of virtual contests.  
   <https://codeforces.com/>
-- **AtCoder** – high-quality contests with clear statements and strong tasks.  
+- **AtCoder** – regular high-quality contests with clean statements and strong problem design.  
   <https://atcoder.jp/>
 
-These resources + this notebook are basically my whole CP “universe”.
+These plus this notebook cover most of my competitive programming ecosystem.
 
 ---
 
-## ✅ Final Notes
+## 🇵🇸 Arabic / Local CP Resources I Use
 
-This repository is a living notebook. As I solve more problems, I:
+### Teaching & Explanations
 
-- **Refactor** implementations to be cleaner and safer.
-- **Add comments** when I discover a new trick or a common bug.
-- **Extend topics** with more advanced variants (lazy segment trees, 0–1 BFS, binary lifting, etc.).
+- **CodeAcademy PPU (YouTube)** – PPU’s official competitive programming club channel.  
+  👉 <https://www.youtube.com/@CodeAcademy-ppu/videos>
+- **Mahmoud Ayman – Topic Explanations** – detailed playlists covering graphs, DP, greedy, and more.  
+  👉 <https://www.youtube.com/playlist?list=PLIOhtFzqhbbGroes7my01e8x6GtP71Ah4>
 
-If you are reading this as a recruiter, coach, or teammate:
+### Sheets & Training Groups
 
-- Every file here is something I have studied carefully and used to solve real problems.
-- I treat this notebook as my **personal CP knowledge base**, not just random pasted code.
+- **Rokba Topic Sheets – Coach Hazem**  
+  👉 <https://vjudge.net/group/rokba>
+- **Level 2 Training Group – Coach Mohamed Shareef**  
+  👉 <https://codeforces.com/group/2y52k0YLhL>
+- **PCPC Training – Coach Abdelaziz**  
+  👉 <https://vjudge.net/group/pcpc_training>
+- **Mahmoud Ayman Topic Contests**  
+  👉 <https://codeforces.com/group/9QrbarK7qH/contests>
+- **Topic-Based Codeforces Group**  
+  👉 <https://codeforces.com/group/isP4JMZTix/contests>
+- **PPU Graph Sheets – Coach Basel Ja'bari**  
+  👉 <https://vjudge.net/group/ppu-lvl3>
+- **GSG Level 3 – Gaza Sky Geeks**  
+  👉 <https://codeforces.com/group/0Bl9bdDUwH/contests>
+- **ACPC / Arab Regional Contests Group**  
+  👉 <https://codeforces.com/group/Rilx5irOux/contests>
 
-If you are another competitive programmer:
+### Smart Training Tools
 
-- Feel free to use anything here as inspiration for your own notebook.
-- The best way to learn these topics is still the same: **read → implement → debug → solve a lot of problems**.
+- **CP Training Tracker – Virtual Codeforces Contests by Level**  
+  👉 <https://cp-training-tracker.vercel.app/training>
 
-Happy coding and good luck in your next contest! 💪🔥
+> When I pick a topic from `topics/` (for example `BFS.cpp` or `segment tree max.cpp`),  
+> I often combine the implementation here with a **video or sheet from these resources**.  
+> Code + explanation + practice problems = much deeper understanding.
+
+---
+
+## 🎓 Advice for Beginners Starting CP
+
+If you are new to competitive programming and landed on this repo, here is how I would start **from zero**:
+
+1. **Learn basic C++ and STL**  
+   - Variables, loops, functions.
+   - `vector`, `string`, `pair`, `map`, `set`, and simple I/O. citeturn1search11turn1search20  
+
+2. **Start with implementation & easy problems**  
+   - Use Codeforces Div. 3 / Div. 4 problems and the CSES Introductory Problems. citeturn1search16turn1search2turn1search17  
+   - As you solve, come back here and read:
+     - [`Prefix Sum.cpp`](#-1d--2d-prefix-sums)
+     - [`frequency_array.cpp`](#-frequency-arrays)
+     - [`two pointers.cpp`](#-two-pointers)
+
+3. **Follow a structured topic order**  
+   Rough progression:
+   1. Implementation, math basics, prefix sums, frequency arrays.
+   2. Binary search and two pointers.
+   3. Sorting, basic greedy.
+   4. Graph basics (BFS/DFS).
+   5. Shortest paths & MST (Dijkstra, DSU, Kruskal).
+   6. Introductory DP (LIS, knapsack-style problems).
+   7. Data structures (segment tree, Fenwick tree, etc.).
+
+4. **For each topic**
+   - Read the short explanation in this README.
+   - Open the corresponding `topics/<name>.cpp` implementation.
+   - Watch 1–2 explanations from the global or Arabic resources above.
+   - Solve 3–5 problems using that idea on Codeforces / CSES.
+
+5. **Upsolve after every contest**  
+   - Try to solve problems you could not finish in time.  
+   - When a new trick appears, add code or comments in your own notebook (or fork of this repo).
+
+6. **Be patient and consistent**  
+   - Improvement is not linear. Some weeks you feel stuck, then suddenly many ideas click together.
+   - Focus on building strong thinking habits instead of chasing rating alone.
+
+---
+
+## 🧱 Advice for Advanced CP Practitioners / Recruiters
+
+If you are already experienced in CP (or you are reviewing this as a recruiter / coach):
+
+- Each topic in `topics/` is something I have *personally used* to solve real contest problems.
+- Implementations are written to be:
+  - clean and reusable,
+  - careful about typical pitfalls (overflow, off-by-one, complexity),
+  - easy to extend for advanced variants (lazy segment trees, 0–1 BFS, divide-and-conquer DP, etc.). citeturn1search5turn1search28  
+- This notebook represents how I:
+  - structure my knowledge by topic,
+  - keep reference implementations handy,
+  - and continuously refine them as I learn from editorials and harder problems.
+
+For technical interviews, this repo also reflects how I approach:
+- designing abstractions (DSU, segment tree, templates),  
+- reasoning about complexity and constraints,  
+- and documenting mental models instead of just dropping code.
+
+---
+
+## 🏁 Final Message
+
+Competitive Programming is built on:
+
+- clear logic,  
+- patience,  
+- structured practice,  
+- and learning from every mistake.  
+
+Use this repository as your **toolbox**:  
+read the code, change it, break it, fix it, and apply it to real problems.
+
+> If this notebook was useful to you, consider leaving a ⭐ on the repo –  
+> and please **keep me in your prayers**. 🌿  
+>  
+> Happy coding, and good luck in your next contest! 💪🔥
