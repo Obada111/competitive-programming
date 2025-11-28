@@ -1,45 +1,54 @@
 # 🚀 Competitive Programming Notebook & Topic Library
 
-> Personal toolbox for algorithms, data structures, and contest workflow.  
-> Built in C++17, tested on Codeforces, AtCoder, contests.
+![CP Notebook](https://img.shields.io/badge/Competitive%20Programming-Notebook-blue)
+![Language](https://img.shields.io/badge/Language-C++17-informational)
+![Status](https://img.shields.io/badge/Status-Active-success)
+
+Welcome to my **Competitive Praogramming Notebook**.  
+This repository is where I collect the algorithms, templates, and patterns that I actually use in contests  
+(** Codeforces / AtCoder / online judges...**).
+
+> 🧰 Think of this repo as a _battle-tested toolbox_, not a textbook.
 
 ---
 
-## 📚 Quick Navigation
+## 📚 Navigation — How to Use This README
 
-Use this as a **map of the repo**. Click to jump:
+If you're here for something specific, use this mini “dictionary”:
 
-- [1. Repository Overview](#-repository-overview)
-- [2. Topic Map (What’s Implemented)](#-topic-map--whats-implemented)
-- [3. How I Think About Competitive Programming](#-how-i-think-about-competitive-programming)
-- [4. Topic Notes & Patterns](#-topic-notes--patterns)
-  - [4.1 Prefix Sums (1D & 2D)](#41-prefix-sums-1d--2d)
-  - [4.2 Frequency Arrays](#42-frequency-arrays)
-  - [4.3 Binary Exponentiation](#43-binary-exponentiation)
-  - [4.4 Classic Binary Search](#44-classic-binary-search)
-  - [4.5 Two Pointers](#45-two-pointers)
-  - [4.6 Bitmask & Recursive Subsets](#46-bitmask--recursive-subsets)
-  - [4.7 Sieve of Eratosthenes & Fast `isPrime`](#47-sieve-of-eratosthenes--fast-isprime)
-  - [4.8 Graph Traversal (BFS / DFS)](#48-graph-traversal-bfs--dfs)
-  - [4.9 Dijkstra’s Algorithm](#49-dijkstras-algorithm)
-  - [4.10 Disjoint Set Union (DSU)](#410-disjoint-set-union-dsu)
-  - [4.11 Kruskal’s Minimum Spanning Tree](#411-kruskals-minimum-spanning-tree)
-  - [4.12 Dynamic Programming: LIS & CIS](#412-dynamic-programming-lis--cis)
-  - [4.13 Square Root Decomposition](#413-square-root-decomposition)
-  - [4.14 Segment Tree (Range Max + Point Update)](#414-segment-tree-range-max--point-update)
-- [5. Roadmap & Learning Plan (Beginners → Advanced)](#-roadmap--learning-plan-beginners--advanced)
-- [6. Deep Advice for Beginners (Honest, Long-Term)](#-deep-advice-for-beginners-honest-long-term)
-- [7. Environment Setup – Sublime Text for CP](#-environment-setup--sublime-text-for-cp)
-- [8. External Resources I Actively Use](#-external-resources-i-actively-use)
-- [9. Contributing / Customizing This Notebook](#-contributing--customizing-this-notebook)
+- **For beginners**
+  - [Quick Start & How to Use This Repo](#1-quick-start--how-to-use-this-repo)
+  - [Beginner Advice & Training Philosophy](#3-beginner-advice--training-philosophy)
+  - [Sublime Text Setup for Competitive Programming](#4-setting-up-sublime-text-for-competitive-programming)
+  - [Roadmap & Learning Resources](#5-roadmap--learning-resources)
+- **By topic (matches the `topics/` folder)**
+  - [Prefix Sums (1D & 2D)](#21-prefix-sums-1d--2d)
+  - [Frequency Arrays](#22-frequency-arrays)
+  - [Binary Exponentiation](#23-binary-exponentiation)
+  - [Binary Search (Answer & Index)](#24-binary-search-classic)
+  - [Two Pointers / Sliding Window](#25-two-pointers--sliding-window)
+  - [Bitmask & Recursive Subsets](#26-bitmask--recursive-subsets)
+  - [Sieve of Eratosthenes & Fast `isPrime`](#27-sieve-of-eratosthenes--fast-isprime)
+  - [Graph Traversal (BFS, DFS)](#28-graph-traversal-bfs--dfs)
+  - [Shortest Paths — Dijkstra](#29-dijkstras-algorithm)
+  - [Disjoint Set Union (DSU) & Kruskal MST](#210-dsu--kruskal-mst)
+  - [Dynamic Programming: LIS & CIS](#211-dynamic-programming-lis--cis)
+  - [Square Root Decomposition](#212-square-root-decomposition)
+  - [Segment Tree (Range Max + Point Update)](#213-segment-tree-range-max--point-update)
+- **Recruiters / reviewers**
+  - [What This Repo Represents](#6-for-recruiters-coaches--reviewers)
+- **Everyone**
+  - [Arabic / Local CP Ecosystem](#7-arabic--local-cp-ecosystem-i-use)
+  - [Global CP Resources](#8-global-competitive-programming-resources)
+  - [Contributing & Customizing](#9-contributing--customizing)
 
 ---
 
-## 🗂 Repository Overview
+## 🗂 Repository Structure
 
 ```text
 .
-├─ template1.cpp / template2.cpp   # Main C++17 contest templates
+├─ template1.cpp / template2.cpp   # My main C++ templates for contests
 ├─ topics/                         # Topic-wise implementations
 │  ├─ 2D Prefix Sum.cpp
 │  ├─ Prefix Sum.cpp
@@ -63,78 +72,80 @@ Use this as a **map of the repo**. Click to jump:
 └─ README.md                       # You are here
 ```
 
-Each file is written as **contest-ready code**: iterative where possible, `O(n)` / `O(log n)` where needed, and focused on readability + performance.
+Each file is written with **contest usage** in mind: clean, iterative when possible, and focused on `O(n)` / `O(log n)` solutions.
 
 ---
 
-## 🗺 Topic Map – What’s Implemented
+## 🔭 Topic Map (Big Picture)
 
 ```mermaid
 graph TD
-  A[Competitive Programming Notebook] --> B[Arrays & Prefix Structures]
-  A --> C[Searching & Patterns]
-  A --> D[Number Theory]
-  A --> E[Graphs]
-  A --> F[Data Structures]
-  A --> G[Dynamic Programming]
+  A[Arrays & Prefix Ideas] --> B[Prefix Sums]
+  A --> C[2D Prefix Sums]
+  A --> D[Frequency Arrays]
+  A --> E[Bitmask / Subsets]
 
-  B --> B1[Prefix Sum 1D]
-  B --> B2[Prefix Sum 2D]
-  B --> B3[Frequency Array]
+  F[Searching] --> G[Binary Search]
+  F --> H[Two Pointers]
 
-  C --> C1[Binary Search]
-  C --> C2[Two Pointers]
-  C --> C3[Bitmask Subsets]
-  C --> C4[Recursive Subsets]
+  I[Number Theory] --> J[Sieve]
+  I --> K[Fast isPrime]
+  I --> L[Binary Exp]
 
-  D --> D1[Sieve of Eratosthenes]
-  D --> D2[Fast isPrime]
+  M[Graphs] --> N[BFS]
+  M --> O[DFS]
+  M --> P[Dijkstra]
+  M --> Q[DSU + Kruskal]
 
-  E --> E1[BFS]
-  E --> E2[DFS]
-  E --> E3[Dijkstra]
-  E --> E4[DSU + Kruskal MST]
+  R[Data Structures] --> S[Sqrt Decomposition]
+  R --> T[Segment Tree]
 
-  F --> F1[Square Root Decomposition]
-  F --> F2[Segment Tree (Range Max)]
-
-  G --> G1[DP LIS]
-  G --> G2[DP CIS]
+  U[Dynamic Programming] --> V[LIS]
+  U --> W[CIS]
 ```
 
 ---
 
-## 🧠 How I Think About Competitive Programming
+## 1. Quick Start — How to Use This Repo
 
-Competitive Programming for me is:
+👶 **If you’re a beginner**
 
-1. **Algorithm toolbox** – knowing *which* tool solves *which* problem class.
-2. **Pattern recognition** – mapping new problems to known patterns.
-3. **Execution speed** – implementing reliably under time pressure.
+1. Clone the repo:
+   ```bash
+   git clone https://github.com/<your-username>/<your-repo>.git
+   cd <your-repo>
+   ```
+2. Pick **one topic at a time** (for example `Prefix Sum.cpp`).
+3. Open the file, read the comments, then:
+   - Rewrite it yourself in a fresh file.
+   - Run it on simple custom examples.
+   - Use it in a real problem (from CSES / Codeforces / VJudge).
+4. Keep a small notebook (or notes file) for:
+   - New ideas you learned.
+   - Classic bugs you made (off-by-one, overflow, etc.).
 
-I was heavily influenced by these references on how to practice effectively:  
-- Um_nik – *How to practice Competitive Programming* (separating “SOLVE” and “FAST” practice). citeturn2search31  
-- Radewoosh – *My opinion on how to practice competitive programming*. citeturn2search27  
-- USACO Guide – introductory CP advice & structured learning. citeturn2search18turn2search22  
+🧠 **If you’re already experienced**
 
-This notebook is my **implementation layer** on top of those ideas.
+- Treat this as:
+  - My **implementation reference**.
+  - A quick way to review how I structure code in contests.
+- You can jump directly to the topic you care about using the navigation above.
+
+🏢 **If you’re a recruiter / reviewer**
+
+- This repository demonstrates:
+  - Familiarity with the most common data structures / algorithms used in competitive programming.citeturn9search12  
+  - Production-like C++ templates and repeatable patterns for solving problems under time pressure.
 
 ---
 
-## 🔍 Topic Notes & Patterns
+## 2. Topic Overview
 
-Below are practical notes **from actually using** these topics in problems.
+### 2.1 Prefix Sums (1D & 2D)
 
----
+Used for fast range sum queries.
 
-### 4.1 Prefix Sums (1D & 2D)
-
-#### What They Solve
-
-- Constant-time range sums after linear preprocessing.  
-- Very common in CSES / Codeforces / AtCoder early & mid problems. citeturn2search30  
-
-#### 1D Prefix Sum
+#### Core Idea (1D)
 
 ```cpp
 // a[1..n], pref[0] = 0
@@ -142,69 +153,70 @@ for (int i = 1; i <= n; ++i)
     pref[i] = pref[i - 1] + a[i];
 
 auto range_sum = [&](int l, int r) {
-    return pref[r] - pref[l - 1]; // inclusive range
+    return pref[r] - pref[l - 1];
 };
 ```
 
-✅ **Common use-cases**
+#### 2D Prefix Sum Formula
 
-- Sum over `[l, r]`
-- Checking if a sequence of differences balances back to zero
-- Counting prefix counts (e.g., number of 1s up to index `i`)
+For a grid `pref[i][j]` storing sum over `(1,1)..(i,j)`:
 
-⚠ **Bugs I hit**
-
-- Mixing 0-based + 1-based indices.
-- Using `int` when `n` and values are large → overflow. I now default to `long long` for sums.
-
-#### 2D Prefix Sum
-
-```cpp
-// pref[i][j] = sum of rectangle (1,1) .. (i,j)
-long long query(int x1, int y1, int x2, int y2) {
-    return pref[x2][y2]
-         - pref[x1-1][y2]
-         - pref[x2][y1-1]
-         + pref[x1-1][y1-1];
-}
+```text
+sum(x1..x2, y1..y2) =
+    pref[x2][y2]
+  - pref[x1-1][y2]
+  - pref[x2][y1-1]
+  + pref[x1-1][y1-1]
 ```
 
-Useful for:
+#### Where it shows up
 
-- Counting cells in sub-rectangles
-- Offline queries on grids (no updates)
+- Many range-sum problems in **CSES**, **AtCoder ABC/ARC**, and Codeforces basic rounds.citeturn9search4turn9search30  
+
+#### Classic beginner mistakes (I made these too)
+
+- Mixing 0-based and 1-based indexing → I now always write the formula **on paper** first.
+- Using `int` when sum can exceed \(2^{31}-1\) → I always use `long long` for `pref`.
+- Forgetting to initialize `pref[0] = 0`.
 
 ---
 
-### 4.2 Frequency Arrays
+### 2.2 Frequency Arrays
 
-Used when values are in a **small range** (letters, small ints, compressed indices).
+Simple but insanely useful.
 
-- Cheaper than `map`/`unordered_map` in many problems.
-- Perfect for “count something, then check conditions”.
+- You use an array `freq[value]` when the value range is small (`<= 1e6`, characters, etc.).
+- Faster than `map`/`unordered_map` and easier to debug.
 
 ```cpp
-const int MAXV = 1e6;
-vector<int> freq(MAXV + 1);
+const int MAXV = 1e6 + 5;
+vector<int> freq(MAXV, 0);
 
 for (int x : a) freq[x]++;
 
-if (freq[val] > 0) { /* ... */ }
+if (freq[value] > 0) {
+    // value appears
+}
 ```
 
-⚠ **Traps**
+**Typical uses**
 
-- Forgetting to reset between test cases (I now reset only used entries when necessary).
-- Mis-calculating max value → array too small → runtime error.
+- Counting occurrences, checking anagrams, counting pairs, offline constraints, etc.
+- Many problems that look like “hash map” tasks are actually easier with a frequency array.
+
+**Pitfalls**
+
+- Not clearing between test cases.
+- Underestimating max value and going out of bounds.
 
 ---
 
-### 4.3 Binary Exponentiation
+### 2.3 Binary Exponentiation
 
-Fast `O(log e)` exponentiation; essential for modular arithmetic, combinatorics, etc. citeturn2search21turn2search17  
+Fast \(a^b\) in \(O(\log b)\) time.
 
 ```cpp
-long long modpow(long long a, long long e, long long mod) {
+long long binpow(long long a, long long e, long long mod) {
     long long res = 1 % mod;
     a %= mod;
     while (e > 0) {
@@ -216,16 +228,22 @@ long long modpow(long long a, long long e, long long mod) {
 }
 ```
 
-Used in:
+**Where I use it**
 
-- Modular inverses when `mod` is prime (`a^(mod-2) % mod`)
-- Fast powering for matrix / linear recurrences
+- Modular arithmetic (`(a^b) mod m`) in number theory problems.
+- Precomputing modular inverses in combination with factorials.citeturn9search12  
+
+**Common bugs**
+
+- Forgetting `a %= mod` at the start.
+- Using `int` → overflow.
+- Using negative base and forgetting to normalize it into `[0, mod)`.
 
 ---
 
-### 4.4 Classic Binary Search
+### 2.4 Binary Search (Classic)
 
-**Idea:** When answer is monotonic (true → false / false → true), binary search on answer.
+Whenever the answer is **monotonic** in some parameter, I immediately think “binary search on answer”.
 
 ```cpp
 long long lo = L, hi = R, ans = L;
@@ -233,117 +251,100 @@ while (lo <= hi) {
     long long mid = lo + (hi - lo) / 2;
     if (good(mid)) {
         ans = mid;
-        lo = mid + 1;     // or hi = mid - 1 depending on problem
+        lo = mid + 1;  // or hi = mid - 1 depending on problem
     } else {
-        hi = mid - 1;
+        hi = mid - 1;  // or lo = mid + 1
     }
 }
 ```
 
-🧪 **My checklist before using BS**
+**My checklist**
 
-1. Is `good(x)` monotonic in `x`?
-2. Do I know at least one `x` which is definitely good / bad?
-3. Are my bounds wide enough to include the true answer?
+- Is `good(x)` monotonic?
+- Are the bounds `L` and `R` correct and big enough?
+- Do I update `ans` only on the correct branch?
 
-Typical mistakes: wrong bounds, `mid` overflow (fix with `lo + (hi-lo)/2`), or non-monotonic `good`.
+I usually test with 5–10 manual values on paper before trusting the implementation.
 
 ---
 
-### 4.5 Two Pointers
+### 2.5 Two Pointers / Sliding Window
 
-Sliding window style; best friends with prefix sums and frequency arrays.
+Maintain a window `[l, r)` such that some condition holds:
 
 ```cpp
 int n = a.size();
 int l = 0;
-long long sum = 0;
+long long cur = 0, best = 0;
+
 for (int r = 0; r < n; ++r) {
-    sum += a[r];
-    while (sum > X) {      // maintain invariant
-        sum -= a[l++];
+    cur += a[r];
+    while (cur > limit) {
+        cur -= a[l];
+        ++l;
     }
-    best = max(best, r - l + 1);
+    best = max(best, cur);
 }
 ```
 
-**Patterns I’ve used**
+**Typical problems**
 
-- Longest subarray with sum ≤ `X`
-- Longest substring with ≤ `K` distinct letters
-- Merge two sorted arrays / pointers on two arrays
+- Longest subarray with sum ≤ X.
+- Longest substring with at most K distinct characters.
+- Merging sorted arrays.
 
-Key idea: *window state* must be updated carefully when moving `l` / `r`.
+**Bugs I met**
+
+- Using `[l, r]` in my head but coding `[l, r)`.
+- Forgetting to update answer after moving `l`.
+- Forgetting to maintain additional info (like frequency of elements).
 
 ---
 
-### 4.6 Bitmask & Recursive Subsets
+### 2.6 Bitmask & Recursive Subsets
 
-#### Bitmask Enumeration
+These files cover both:
 
-For `n ≤ ~20`:
+- full subset enumeration using **bitmasks**,
+- and subset generation using **recursion**.
 
 ```cpp
 for (int mask = 0; mask < (1 << n); ++mask) {
-    // process subset represented by `mask`
+    for (int i = 0; i < n; ++i) {
+        if (mask & (1 << i)) {
+            // i is in subset
+        }
+    }
 }
 ```
 
-Good for:
+I use it for:
 
-- Checking all subsets / subset DP
-- Partitioning, TSP-like brute forces (small input)
+- Small \(n\) (\(n \le 20\)), typical DP on subsets, brute-force checks.
+- Teaching myself how DP states grow when we add extra dimensions.
 
-#### Recursive Subsets
-
-Clean for problems where you track extra state.
-
-```cpp
-void gen(int i) {
-    if (i == n) { /* process */ return; }
-    // don't take i
-    gen(i + 1);
-    // take i
-    // mark taken
-    gen(i + 1);
-}
-```
-
-I always check `n` first: if `n` is big → this is not the right hammer.
+Main thing: always check `n` first. If `n` is 25 or 30, `2^n` will explode.
 
 ---
 
-### 4.7 Sieve of Eratosthenes & Fast `isPrime`
+### 2.7 Sieve of Eratosthenes & Fast `isPrime`
 
-Following CP-Algorithms style implementation. citeturn2search21turn2search17turn2search34  
+The sieve gives all primes up to `N` in \(O(N \log\log N)\).citeturn9search12  
 
-```cpp
-const int N = 1e7;
-vector<bool> is_prime(N+1, true);
-vector<int> primes;
+I use:
 
-void sieve() {
-    is_prime[0] = is_prime[1] = false;
-    for (int i = 2; i * i <= N; ++i)
-        if (is_prime[i])
-            for (int j = i*i; j <= N; j += i)
-                is_prime[j] = false;
-    for (int i = 2; i <= N; ++i)
-        if (is_prime[i]) primes.push_back(i);
-}
-```
+- `Sieve of Eratosthenes.cpp` for multiple queries.
+- `Is Prime Fast.cpp` for one-off checks up to around `1e9`.
 
-`Is Prime Fast.cpp` contains trial division for single checks up to around `1e9`.
+Most common bugs:
+
+- Treating `0` and `1` as prime by mistake.
+- Forgetting that sieve memory is `O(N)` — with `N = 1e8` it can be large.
+- Overflow when checking `i * i <= n` with `int` instead of `long long`.
 
 ---
 
-### 4.8 Graph Traversal (BFS / DFS)
-
-![BFS Tree](https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Breadth-first_tree.svg/350px-Breadth-first_tree.svg.png)
-
-> Breadth-first search explores level by level and runs in `O(|V| + |E|)` time. citeturn3search6  
-
-#### BFS – Shortest Path in Unweighted Graphs
+### 2.8 Graph Traversal (BFS & DFS)
 
 ```cpp
 vector<vector<int>> g(n);
@@ -364,31 +365,24 @@ while (!q.empty()) {
 }
 ```
 
-#### DFS – Depth-First Search
+- **BFS** → shortest path in unweighted graphs, level-order traversal.citeturn8image0turn8image6  
+- **DFS** → connected components, topological sort, cycle detection, bridges, etc.
 
-```cpp
-void dfs(int v) {
-    vis[v] = true;
-    for (int to : g[v])
-        if (!vis[to])
-            dfs(to);
-}
-```
+Common bugs I ran into:
 
-I use DFS for:
-
-- Connected components
-- Topological sort
-- Bridges, articulation points (with extra arrays)
+- Forgetting to clear `visited`/`dist` between test cases.
+- Mixing 0-based and 1-based vertices.
+- Creating directed edges when the graph is actually undirected (or the opposite).
 
 ---
 
-### 4.9 Dijkstra’s Algorithm
+### 2.9 Dijkstra’s Algorithm
 
-For shortest paths with **non-negative** edge weights. citeturn2search21  
+Shortest paths in graphs with **non-negative weights**.
 
 ```cpp
 using P = pair<long long,int>;
+const long long INF = (1LL << 60);
 vector<long long> dist(n, INF);
 priority_queue<P, vector<P>, greater<P>> pq;
 
@@ -407,432 +401,407 @@ while (!pq.empty()) {
 }
 ```
 
-Bugs I met early:
+Things I always check:
 
-- Using `int` for distances, then overflow.
-- Forgetting to skip stale states in the priority queue.
+- All weights are ≥ 0. If not, Dijkstra is invalid.citeturn9search12  
+- `dist` uses `long long`.
+- I handle multiple edges and self-loops correctly.
 
 ---
 
-### 4.10 Disjoint Set Union (DSU)
+### 2.10 DSU & Kruskal MST
 
-Implementation follows the classic **Union–Find with path compression and union by size/rank**, as described in CP-Algorithms. citeturn2search34  
+**DSU.cpp** implements _Disjoint Set Union_ (Union-Find) with:
 
-```cpp
-struct DSU {
-    vector<int> p, sz;
-    DSU(int n) : p(n), sz(n, 1) {
-        iota(p.begin(), p.end(), 0);
-    }
-    int find(int v) {
-        if (v == p[v]) return v;
-        return p[v] = find(p[v]);
-    }
-    bool unite(int a, int b) {
-        a = find(a); b = find(b);
-        if (a == b) return false;
-        if (sz[a] < sz[b]) swap(a, b);
-        p[b] = a;
-        sz[a] += sz[b];
-        return true;
-    }
-};
+- Path compression.
+- Union by size / rank.
+
+**Kruskal MST.cpp** uses DSU to build a Minimum Spanning Tree:
+
+1. Sort edges by weight.
+2. For each edge `(u, v, w)`:
+   - If `find_set(u) != find_set(v)` → take it and `union_sets(u, v)`.
+
+DSU is also amazing for:
+
+- Offline connectivity queries.
+- “Add edges then answer queries” type problems.citeturn9search12  
+
+Bugs that cost me points:
+
+- Not initializing `parent[i] = i` for all vertices.
+- Returning wrong root due to missing path compression.
+- Forgetting that DSU is typically 0-based in my code but the problem is 1-based.
+
+---
+
+### 2.11 Dynamic Programming: LIS & CIS
+
+- **DP LIS.cpp**
+  - `O(n^2)` DP (easy to understand).
+  - `O(n log n)` patience sorting version for real contests.
+
+- **DP CIS.cpp**
+  - _Common Increasing Subsequence_ between two sequences — combines LCS + LIS ideas.
+
+These files are where I learned to:
+
+- Separate **state** from **transition**.
+- Visualize sequences and think about ordering constraints.citeturn9search18  
+
+---
+
+### 2.12 Square Root Decomposition
+
+```text
+n elements  →  blocks of size B ≈ sqrt(n)
 ```
 
-I use DSU for:
+You precompute something (like sum / min / max) per block.
 
-- Connectivity queries,
-- Offline queries,
-- Kruskal’s MST.
+- Query = combine a few full blocks + some leftover elements.
+- Point update = update one element + its block.
 
----
+I use it when:
 
-### 4.11 Kruskal’s Minimum Spanning Tree
-
-Sort edges by weight, then add them if they connect different components.
-
-```cpp
-struct Edge { int u, v; long long w; };
-
-long long kruskal(int n, vector<Edge>& edges) {
-    sort(edges.begin(), edges.end(),
-        [](const Edge& a, const Edge& b) {
-            return a.w < b.w;
-        });
-    DSU dsu(n);
-    long long cost = 0;
-    for (auto &e : edges) {
-        if (dsu.unite(e.u, e.v))
-            cost += e.w;
-    }
-    return cost;
-}
-```
+- Constraints are around `1e5`.
+- Segment tree is overkill or time is short.
 
 ---
 
-### 4.12 Dynamic Programming: LIS & CIS
+### 2.13 Segment Tree (Range Max + Point Update)
 
-#### LIS (Longest Increasing Subsequence)
-
-I keep both:
-
-- `O(n^2)` DP – good for starting and educational problems.
-- `O(n log n)` patience sorting method – used in real contests.
-
-```cpp
-vector<int> a(n), tails;
-for (int x : a) {
-    auto it = lower_bound(tails.begin(), tails.end(), x);
-    if (it == tails.end()) tails.push_back(x);
-    else *it = x;
-}
-int lis = (int)tails.size();
-```
-
-#### CIS (Common Increasing Subsequence)
-
-A more advanced variant combining LCS + LIS ideas. Problems in this area are very good training for **state design** and transition reasoning.
-
----
-
-### 4.13 Square Root Decomposition
-
-Blocks of size `~sqrt(n)` for range queries + point updates.
-
-```cpp
-int n;
-vector<long long> a;
-vector<long long> block;
-int B; // block size
-
-void build(int n_) {
-    n = n_;
-    B = (int)sqrt(n) + 1;
-    block.assign(B, 0);
-    for (int i = 0; i < n; ++i)
-        block[i / B] += a[i];
-}
-```
-
-Used when:
-
-- Segment tree is overkill,
-- Constraints are light enough,
-- Simplicity is more important than absolute speed.
-
----
-
-### 4.14 Segment Tree (Range Max + Point Update)
-
-Inspired by standard tutorial implementations from CP-Algorithms. citeturn2search21turn2search17  
+One of the core data structures in CP.citeturn9search8  
 
 ```cpp
 struct SegTree {
     int n;
-    vector<long long> st;
-    SegTree(int n) : n(n), st(4*n, 0) {}
+    vector<long long> seg;
+    SegTree(int n) : n(n), seg(4*n, 0) {}
 
-    void build(int p, int l, int r, const vector<long long>& a) {
+    void build(vector<long long> &a, int idx, int l, int r) {
         if (l == r) {
-            st[p] = a[l];
+            seg[idx] = a[l];
             return;
         }
-        int m = (l + r) / 2;
-        build(p*2, l, m, a);
-        build(p*2+1, m+1, r, a);
-        st[p] = max(st[p*2], st[p*2+1]);
+        int mid = (l + r) >> 1;
+        build(a, idx<<1, l, mid);
+        build(a, idx<<1|1, mid+1, r);
+        seg[idx] = max(seg[idx<<1], seg[idx<<1|1]);
     }
 
-    void update(int p, int l, int r, int idx, long long val) {
+    void update(int idx, int l, int r, int pos, long long val) {
         if (l == r) {
-            st[p] = val;
+            seg[idx] = val;
             return;
         }
-        int m = (l + r) / 2;
-        if (idx <= m) update(p*2, l, m, idx, val);
-        else update(p*2+1, m+1, r, idx, val);
-        st[p] = max(st[p*2], st[p*2+1]);
+        int mid = (l + r) >> 1;
+        if (pos <= mid) update(idx<<1, l, mid, pos, val);
+        else update(idx<<1|1, mid+1, r, pos, val);
+        seg[idx] = max(seg[idx<<1], seg[idx<<1|1]);
     }
 
-    long long query(int p, int l, int r, int ql, int qr) {
-        if (qr < l || r < ql) return LLONG_MIN; // neutral for max
-        if (ql <= l && r <= qr) return st[p];
-        int m = (l + r) / 2;
-        return max(query(p*2, l, m, ql, qr),
-                   query(p*2+1, m+1, r, ql, qr));
+    long long query(int idx, int l, int r, int ql, int qr) {
+        if (qr < l || r < ql) return LLONG_MIN;
+        if (ql <= l && r <= qr) return seg[idx];
+        int mid = (l + r) >> 1;
+        return max(
+            query(idx<<1, l, mid, ql, qr),
+            query(idx<<1|1, mid+1, r, ql, qr)
+        );
     }
 };
 ```
 
-Segment trees are one of the main “walls” between intermediate and advanced CP – they appear in many Codeforces / AtCoder problems and in serious ICPC regionals.
+I treat segment tree as the “bridge” between normal arrays and truly advanced structures (Fenwick tree, lazy propagation, etc.).
 
 ---
 
-## 🧭 Roadmap & Learning Plan (Beginners → Advanced)
+## 3. Beginner Advice & Training Philosophy
 
-### 🌟 The Most Important Resource
+This section is written for **new competitive programmers**, but even advanced contestants sometimes need the reminder.
 
-**📌 Complete CP Roadmap (for all levels)**  
-👉 https://www.notion.so/Roadmap-29cf4abdd6528065a1f4fb69db1ce9ac  
+Ideas here are influenced by well-known guides such as USACO Guide, CP-Algorithms, and Codeforces practice blogs.citeturn9search2turn9search10turn9search14turn9search25  
 
-This roadmap is the **central plan** I follow:
+### 3.1 Core Principles
 
-- Level 1 – Programming basics, simple implementation.
-- Level 2 – Core CP patterns (prefix sums, two pointers, binary search, simple graphs).
-- Level 3–5 – Advanced topics: DP on trees, flows, segment trees, number theory, etc.
+1. **Think before you code**
+   - Read the statement slowly.
+   - Rewrite it in your own words.
+   - Try tiny examples (n = 1, 2, 3…) on paper.
 
-I use the roadmap to decide:
+2. **Respect constraints**
+   - If `n ≈ 2e5`, `O(n^2)` is usually impossible.
+   - Learn to guess the intended complexity from input bounds.
 
-- *What to learn next.*
-- *Which topics to skip (for now).*
-- *How to balance new topics vs. practice.*
+3. **Learn ideas, not just code**
+   - When you read a solution:
+     - First, close the code.
+     - Understand the idea using pen & paper.
+     - Only then open the implementation.
 
----
+4. **Upsolve seriously**
+   - After every contest:
+     - Solve 1–3 problems you missed.
+     - Write down mistakes (logic / implementation / reading / time).
 
-## 💡 Deep Advice for Beginners (Honest, Long-Term)
-
-This part is intentionally long. It’s based on my own experience,
-plus ideas from high-rated coders and guides. citeturn2search31turn2search27turn2search23turn2search18turn2search22  
-
-### 1. Focus on **thinking skills**, not language tricks
-
-- Your C++ can be simple. No need for templates and crazy macros at the start.
-- Spend time understanding **why** a solution is correct.
-- When reading editorials, rewrite them in your own words.
-
-### 2. Don’t drown in resources
-
-Good coders often recommend a *small* set of sites:
-
-- **Problems & contests:** Codeforces, AtCoder, CSES, USACO. citeturn2search21turn2search18turn2search30  
-- **Theory & algorithms:** CP-Algorithms, USACO Guide. citeturn2search21turn2search18turn2search17  
-
-Pick a few, stick to them, and avoid hopping between 10 different lists.
-
-### 3. Have a weekly structure
-
-Example weekly schedule (for someone with classes / work):
-
-| Day  | Focus                                           |
-|------|-------------------------------------------------|
-| Mon  | 2 easier problems + review old mistakes         |
-| Tue  | 1 medium problem (new topic)                    |
-| Wed  | 1 virtual contest (CF/AtCoder)                  |
-| Thu  | Upsolve 2–3 unsolved contest problems           |
-| Fri  | Topic study (read CP-Algorithms + implement)    |
-| Sat  | Mix: 1–2 problems + some theory                 |
-| Sun  | Light day: only review + thinking               |
-
-Adjust to your life, but keep:
-
-- **Contests**
-- **Upsolving**
-- **Theory + implementation**
-
-All three matter.
-
-### 4. How to practice a single problem
-
-Before reading editorial:
-
-1. Read the statement carefully.  
-2. Write down small examples with your own hands.  
-3. Ask:
-   - Can I brute force?  
-   - What limits kill brute force?  
-   - What *pattern* does this look like (two pointers? graph? DP?)  
-4. If stuck after ~30–45 minutes:
-   - Read a **hint** or partial editorial.
-   - Implement the solution with comments.
-   - After solving, close the editorial and re-implement from scratch.
-
-This matches advice from multiple strong coders on Codeforces: the real learning happens when you **struggle a bit**, but not forever. citeturn2search31turn2search27turn2search35  
-
-### 5. Upsolving – where rating actually grows
-
-After each contest:
-
-- Mark every problem you couldn’t solve or solved with guesswork.
-- Try them again calmly (even the easiest one you missed).
-- Add interesting patterns to this repo as new topic files or comments.
-
-Most red coders report that systematic upsolving was more important than doing thousands of random tasks. citeturn2search31turn2search19turn2search23  
-
-### 6. Notes from my own mistakes
-
-Things I personally did wrong at the beginning:
-
-- Jumped into very hard problems too early and got demotivated.
-- Solved many **implementation-only** problems but avoided graphs and DP.
-- Ignored time complexity and then got TLE in contest.
-- Didn’t review wrong submissions carefully.
-
-What I changed:
-
-- Solved problems roughly around my rating, plus a few slightly harder ones (following typical practice guides). citeturn2search35turn2search23  
-- Forced myself to implement each new topic at least **twice** in different problems.
-- Built this notebook to avoid re-deriving the same implementation every week.
-
-### 7. Practical beginner checklist
-
-If you’re new, here is a **concrete list**:
-
-1. Make sure you’re comfortable with:
-   - loops, functions, arrays, vectors
-   - `sort`, `pair`, `struct`
-   - basic math, `long long`, modulo operations
-2. Solve ~50 implementation problems (800–1200 rating) on Codeforces / other sites.
-3. Learn:
-   - prefix sums, two pointers, binary search
-   - simple graphs (BFS/DFS)
-   - simple greedy problems
-4. After that:
-   - Start using this repo’s topics as reference.
-   - Join real contests (Codeforces Div. 3/4, AtCoder Beginner).
+5. **Be consistent**
+   - 30–60 minutes *daily* is better than a 6-hour grind once a week.
 
 ---
 
-## 🛠 Environment Setup – Sublime Text for CP
+### 3.2 A Simple Training Plan (Beginner → Intermediate)
 
-I mainly use **Sublime Text 4** with the **FastOlympicCoding** plugin and custom build systems. citeturn3search3turn3search9turn6view0turn2search24turn2search25turn2search36turn2search32  
+Suggested path (adapt it to your own pace):
 
-### 1. Install Sublime Text
+1. **Basics**
+   - Learn your language well (here: C++).
+   - Be comfortable with arrays, `vector`, loops, functions, and STL basics.
 
-- Download from the official website:  
-  👉 https://www.sublimetext.com/download
-- Install like a normal application (Windows / Linux / macOS).
+2. **Phase 1 – Classic Techniques**
+   - Prefix sums (1D, 2D)
+   - Frequency counting
+   - Binary search
+   - Two pointers
+   - Simple greedy
 
-### 2. Install a C++ compiler
+3. **Phase 2 – Graphs & DS**
+   - BFS / DFS
+   - Dijkstra
+   - DSU
+   - Basic MST (Kruskal / Prim)
 
-On Windows, I recommend:
+4. **Phase 3 – Data Structures & DP**
+   - Segment tree (sum / max)
+   - Square root decomposition or Fenwick tree
+   - Basic dynamic programming (knapsack, LIS, DP on paths).
 
-- **MSYS2 + MinGW-w64** or standalone **MinGW-w64**.  
-  Make sure `g++` is in your `PATH`.
+Use the **roadmap link** in the next section as your main guide and this repo as your implementation notebook.
 
-On Linux / macOS:
+---
 
-- Use your package manager (`g++`, `clang++`, etc.).
+## 4. Setting Up Sublime Text for Competitive Programming
 
-### 3. Basic Build System (for quick testing)
+This is a compact version of how I configured Sublime Text for competitive programming, based on the FastOlympicCoding plugin and community blogs.citeturn9search3turn9search11turn9search19turn9search33  
 
-Create a build system:
+### 4.1 Tools You Need
 
-1. `Tools → Build System → New Build System…`
-2. Paste (Windows example, C++17):
+- **C++ compiler**: `g++` (from MinGW / MSYS2 / WSL, depending on your OS).
+- **Sublime Text 3 or 4**.
+- **FastOlympicCoding** plugin for Sublime.
+- (Optional but very useful) **FastOlympicCodingHook** + **Competitive Companion** browser extension for automatic test-case parsing.citeturn9search7  
+
+### 4.2 Install Sublime Text
+
+1. Download from the official site.
+2. Install like any normal editor.
+3. Open it once to let it create its configuration folders.
+
+### 4.3 Install `g++`
+
+- On Windows, I prefer **MSYS2** or **MinGW-w64**.
+- Make sure `g++` is accessible from the terminal:
+  ```bash
+  g++ --version
+  ```
+
+### 4.4 Install FastOlympicCoding
+
+1. Open **Package Control** in Sublime.
+2. Search for **“FastOlympicCoding”** (or `CppFastOlympicCoding`) and install.
+3. Read the plugin README for detailed usage — shortcut keys, Test Manager, etc.  
+   It supports:
+   - Test-case management.
+   - Stress testing.
+   - Quick compilation & run.
+
+### 4.5 Configure a C++ Build System
+
+Example simple build system (you can customize):
 
 ```json
 {
-    "shell_cmd": "g++ -std=c++17 -O2 -Wall \"${file}\" -o \"${file_path}/${file_base_name}.exe\" && \"${file_path}/${file_base_name}.exe\" < \"${file_path}/input.txt\" > \"${file_path}/output.txt\"",
+    "shell_cmd": "g++ -std=c++17 -O2 \"${file}\" -o \"${file_path}/${file_base_name}.exe\" && \"${file_path}/${file_base_name}.exe\" < input.txt",
     "file_regex": "^(..[^:]*):([0-9]+):?([0-9]+)?:? (.*)$",
     "working_dir": "${file_path}",
-    "selector":  "source.c++"
+    "selector": "source.c++"
 }
 ```
 
-3. Save as `CP-C++17.sublime-build`.
-4. Create `input.txt` beside your `.cpp` and write your tests there.
-5. Press <kbd>Ctrl</kbd> + <kbd>B</kbd> to compile & run.
+- Put this in `Tools → Build System → New Build System…`.
+- Save as e.g. `CP.json`.
 
-(Adjust the `.exe` part on Linux/macOS: just use `./${file_base_name}`.)
+### 4.6 Optional: Automatic Test Parsing
 
-### 4. Install Package Control
+- Install **Competitive Companion** browser extension.
+- Install **FastOlympicCodingHook** (GitHub).
+- Start the hook script so that when you click the *green plus* icon on Codeforces, test cases appear automatically in your Sublime project.
 
-To install third-party plugins easily:
-
-- Official guide from Sublime / blogs shows how to open the console and paste the installer snippet. citeturn3search11turn3search14  
-
-Once installed, use:
-
-- <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd> → “Package Control: Install Package”.
-
-### 5. FastOlympicCoding plugin
-
-This plugin turns Sublime into a **full CP environment**. citeturn6view0turn2search24turn2search28turn2search36turn2search37  
-
-- Install via **Package Control**: search for `FastOlympicCoding`.
-- Features:
-  - Test manager with multiple testcases.
-  - Stress testing (wrong vs. correct solution).
-  - Class completion / snippets.
-  - Real-time linting.
-
-Example screenshot (from the official repo):
-
-![FastOlympicCoding Test Manager](https://github.com/Jatana/FastOlympicCoding/raw/master/ScreenShots/TestManager.gif)
-
-Key keybindings (default):
-
-- `Ctrl+Alt+B` – compile & run.
-- `Ctrl+Enter` – new test.
-- `Ctrl+D` – delete test.
-- `Ctrl+Shift+Up/Down` – reorder tests.
-
-### 6. CompetitiveProgrammingParser + Competitive Companion (optional)
-
-To parse Codeforces problems directly into Sublime. citeturn2search36turn2search20  
-
-- Install browser extension **Competitive Companion**.
-- Install Sublime package **CompetitiveProgrammingParser**.
-- When you open a CF problem, press the green “+” icon – a `.cpp` + tests are generated in your folder automatically.
-
-### 7. My personal workflow in Sublime
-
-1. Use **template1.cpp** / **template2.cpp** from this repo as the starting file.
-2. Press a hotkey to compile & run against local tests (FastOlympicCoding or simple build).
-3. Once stable, copy to Codeforces / AtCoder and submit.
-4. For tricky problems:
-   - Use stress testing (FastOlympicCoding) against a brute-force solution.
-
-This combination of **Sublime + FastOlympicCoding + this notebook** is enough for serious ICPC preparation.
+This setup lets you go from **problem page → code → running on samples** in a few seconds.
 
 ---
 
-## 🌍 External Resources I Actively Use
+## 5. Roadmap & Learning Resources
 
-These are the sites I rely on most, with high-quality content and community recommendations. citeturn2search21turn2search17turn2search18turn2search22turn2search30turn2search23turn2search35  
+### 🌟 The Most Important Resource
 
-### Algorithm References
+#### 📌 Complete CP Roadmap (all levels)
 
-- **CP-Algorithms** – algorithms & data structures explained with code.  
-  👉 https://cp-algorithms.com/
-- **USACO Guide** – structured modern guide for CP.  
-  👉 https://usaco.guide/
-- **CSES Problemset** – clean, high-quality problem set.  
-  👉 https://cses.fi/problemset/
+👉 **https://www.notion.so/Roadmap-29cf4abdd6528065a1f4fb69db1ce9ac**
 
-### Platforms
+This roadmap is my main “big picture” reference for:
 
-- **Codeforces** – main contest platform.  
-  👉 https://codeforces.com/
-- **AtCoder** – excellent task quality & editorials.  
-  👉 https://atcoder.jp/
+- Level 1 → fundamentals.
+- Level 2 → core topics.
+- Level 3+ → advanced graphs, data structures, number theory, DP.
 
-### Books (optional)
+Use it together with:
 
-Recommended by USACO & others: citeturn2search22  
-
-- *Competitive Programming* – Steven & Felix Halim  
-- *Programming Challenges* – Skiena & Revilla  
-- *Looking for a Challenge?* – Polish Olympiad authors
+- This notebook (implementations).
+- The resources listed below.
 
 ---
 
-## 🤝 Contributing / Customizing This Notebook
+### 5.1 Arabic / Local CP Ecosystem I Use
 
-This repository is intentionally **personal**:
+#### Teaching & Explanations
 
-- Every file is something I have studied and used.
-- Comments often include small notes about tricky edge cases or optimizations.
+- **CodeAcademy PPU (YouTube)** – PPU’s official CP club  
+  👉 https://www.youtube.com/@CodeAcademy-ppu/videos  
+- **Mahmoud Ayman – Topic Explanations** – graphs, DP, greedy, number theory, etc.  
+  👉 https://www.youtube.com/playlist?list=PLIOhtFzqhbbGroes7my01e8x6GtP71Ah4  
 
-If you’re using this repo:
+#### Sheets & Training Groups
 
-- Feel free to **fork** it and customize:
-  - add your own topics,
-  - change templates,
-  - rewrite comments in your own style.
-- If you spot a bug or have a cleaner implementation, you can open a PR or just improve your fork.
+- **Rokba Topic Sheets – Coach Hazem**  
+  👉 https://vjudge.net/group/rokba  
+- **Level 2 Training Group – Coach Mohamed Shareef**  
+  👉 https://codeforces.com/group/2y52k0YLhL  
+- **PCPC Training – Coach Abdelaziz**  
+  👉 https://vjudge.net/group/pcpc_training  
+- **Mahmoud Ayman Topic Contests**  
+  👉 https://codeforces.com/group/9QrbarK7qH/contests  
+- **Topic-Based Codeforces Group**  
+  👉 https://codeforces.com/group/isP4JMZTix/contests  
+- **PPU Graph Sheets – Coach Basel Ja'bari**  
+  👉 https://vjudge.net/group/ppu-lvl3  
+- **GSG Level 3 – Gaza Sky Geeks**  
+  👉 https://codeforces.com/group/0Bl9bdDUwH/contests  
+- **ACPC / Arab Regional Contests Group**  
+  👉 https://codeforces.com/group/Rilx5irOux/contests  
 
-> The goal is not to have a “perfect library”, but a **living notebook** that grows with experience.  
-> Good luck in your contests – and if this repo helped you, don’t forget us in your prayers 🌿
+#### Smart Training Tools
 
+- **CP Training Tracker – Virtual CF Contests by Level**  
+  👉 https://cp-training-tracker.vercel.app/training  
+
+---
+
+### 5.2 Global Competitive Programming Resources
+
+Some of the best publicly available resources:
+
+- **CP-Algorithms (e-maxx translation)** – algorithm reference for CP  
+  👉 https://cp-algorithms.com citeturn9search12  
+- **USACO Guide** – structured roadmap + problems, not just for USACO  
+  👉 https://usaco.guide citeturn9search10  
+- **CSES Problemset** – clean, well-structured problem list  
+  👉 https://cses.fi/problemset  
+- **Codeforces** – my main place for contests & practice  
+  👉 https://codeforces.com  
+- **AtCoder** – very high-quality contests with good editorials  
+  👉 https://atcoder.jp  
+- **VisuAlgo** – visualizations for many data structures / algorithms  
+  👉 https://visualgo.net/en citeturn9search14  
+- **Competitive Programmer’s Handbook (free PDF)**  
+  👉 https://usaco.guide/CPH.pdf citeturn9search6  
+
+Additionally, there are excellent Codeforces blogs about practice & mindset (Radewoosh, Um_nik, E869120, etc.).citeturn9search1turn9search5turn9search17turn9search31  
+
+---
+
+## 6. For Recruiters, Coaches & Reviewers
+
+This repository shows:
+
+- Implementations of core algorithms and data structures that regularly appear in
+  - ICPC-style contests,
+  - Codeforces rounds,
+  - AtCoder contests,
+  - and typical technical interview questions.
+- Ability to:
+  - Design reusable templates under contest constraints.
+  - Reason about complexity, corner cases, and memory usage.
+  - Maintain consistent coding style (names, macros, structure).
+
+Every `.cpp` here corresponds to something I’ve studied in theory and used to solve real problems.
+
+---
+
+## 7. Arabic / Local CP Ecosystem I Use
+
+(Repeated here for convenience — this section is especially useful for students from the region.)
+
+- CodeAcademy PPU (YouTube)  
+- Mahmoud Ayman topics (YouTube)  
+- Rokba / PCPC / PPU sheets on VJudge  
+- Level 2 / GSG / ACPC / topic-based Codeforces groups  
+- CP Training Tracker for smart, level-based virtual contests  
+
+See [Roadmap & Learning Resources](#5-roadmap--learning-resources) above for direct links.
+
+---
+
+## 8. Global Competitive Programming Resources
+
+Again, the short list:
+
+- CP-Algorithms  
+- USACO Guide  
+- CSES Problemset  
+- Codeforces  
+- AtCoder  
+- VisuAlgo  
+- Competitive Programmer’s Handbook  
+
+Use the roadmap + this notebook + these resources = a complete CP environment.
+
+---
+
+## 9. Contributing & Customizing
+
+This repository is mainly my personal notebook, but you are welcome to:
+
+- **Fork** it and adapt:
+  - Add your own topics (Fenwick tree, lazy segment tree, LCA, flows, etc.).
+  - Translate comments into your language.
+  - Replace or extend templates.
+- **Open issues / pull requests** if you spot:
+  - Bugs,
+  - Undefined behaviour,
+  - Or better ways to write something.
+
+If you’re using this repo to learn:
+
+> Feel free to edit, break, and rebuild every file.  
+> The best learning happens when you rewrite things in **your own style**.
+
+---
+
+## 🏁 Final Message
+
+Competitive Programming is built on:
+
+- clear logic  
+- patience & discipline  
+- structured practice  
+- learning honestly from every mistake  
+
+Use this repository as a toolbox, not something to memorize.
+
+If this helped you:
+
+- consider leaving a ⭐ on the repo,  
+- and don’t forget us in your prayers 🌿  
+
+**Happy coding, and good luck in your next contest! 💪🔥**  
