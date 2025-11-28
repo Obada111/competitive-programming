@@ -663,7 +663,6 @@ Use it together with:
 ---
 
 ### 5.1 Arabic / Local CP Ecosystem I Use
-
 #### Teaching & Explanations
 
 - **CodeAcademy PPU (YouTube)** – PPU’s official CP club  
@@ -694,6 +693,29 @@ Use it together with:
 
 - **CP Training Tracker – Virtual CF Contests by Level**  
   👉 https://cp-training-tracker.vercel.app/training  
+
+---
+
+### 5.2 Global Competitive Programming Resources
+
+Some of the best publicly available resources:
+
+- **CP-Algorithms (e-maxx translation)** – algorithm reference for CP  
+  👉 https://cp-algorithms.com citeturn9search12  
+- **USACO Guide** – structured roadmap + problems, not just for USACO  
+  👉 https://usaco.guide citeturn9search10  
+- **CSES Problemset** – clean, well-structured problem list  
+  👉 https://cses.fi/problemset  
+- **Codeforces** – my main place for contests & practice  
+  👉 https://codeforces.com  
+- **AtCoder** – very high-quality contests with good editorials  
+  👉 https://atcoder.jp  
+- **VisuAlgo** – visualizations for many data structures / algorithms  
+  👉 https://visualgo.net/en citeturn9search14  
+- **Competitive Programmer’s Handbook (free PDF)**  
+  👉 https://usaco.guide/CPH.pdf citeturn9search6  
+
+Additionally, there are excellent Codeforces blogs about practice & mindset (Radewoosh, Um_nik, E869120, etc.).citeturn9search1turn9search5turn9search17turn9search31  
 
 ---
 
