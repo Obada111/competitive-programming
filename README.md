@@ -134,7 +134,7 @@ graph TD
 🏢 **If you’re a recruiter / reviewer**
 
 - This repository demonstrates:
-  - Familiarity with the most common data structures / algorithms used in competitive programming.citeturn9search12  
+  - Familiarity with the most common data structures / algorithms used in competitive programming.
   - Production-like C++ templates and repeatable patterns for solving problems under time pressure.
 
 ---
@@ -171,7 +171,7 @@ sum(x1..x2, y1..y2) =
 
 #### Where it shows up
 
-- Many range-sum problems in **CSES**, **AtCoder ABC/ARC**, and Codeforces basic rounds.citeturn9search4turn9search30  
+- Many range-sum problems in **CSES**, **AtCoder ABC/ARC**, and Codeforces basic rounds.
 
 #### Classic beginner mistakes (I made these too)
 
@@ -231,7 +231,7 @@ long long binpow(long long a, long long e, long long mod) {
 **Where I use it**
 
 - Modular arithmetic (`(a^b) mod m`) in number theory problems.
-- Precomputing modular inverses in combination with factorials.citeturn9search12  
+- Precomputing modular inverses in combination with factorials.
 
 **Common bugs**
 
@@ -329,7 +329,7 @@ Main thing: always check `n` first. If `n` is 25 or 30, `2^n` will explode.
 
 ### 2.7 Sieve of Eratosthenes & Fast `isPrime`
 
-The sieve gives all primes up to `N` in \(O(N \log\log N)\).citeturn9search12  
+The sieve gives all primes up to `N` in \(O(N \log\log N)\).
 
 I use:
 
@@ -365,7 +365,7 @@ while (!q.empty()) {
 }
 ```
 
-- **BFS** → shortest path in unweighted graphs, level-order traversal.citeturn8image0turn8image6  
+- **BFS** → shortest path in unweighted graphs, level-order traversal.
 - **DFS** → connected components, topological sort, cycle detection, bridges, etc.
 
 Common bugs I ran into:
@@ -403,7 +403,7 @@ while (!pq.empty()) {
 
 Things I always check:
 
-- All weights are ≥ 0. If not, Dijkstra is invalid.citeturn9search12  
+- All weights are ≥ 0. If not, Dijkstra is invalid.  
 - `dist` uses `long long`.
 - I handle multiple edges and self-loops correctly.
 
@@ -425,7 +425,7 @@ Things I always check:
 DSU is also amazing for:
 
 - Offline connectivity queries.
-- “Add edges then answer queries” type problems.citeturn9search12  
+- “Add edges then answer queries” type problems.
 
 Bugs that cost me points:
 
@@ -447,7 +447,7 @@ Bugs that cost me points:
 These files are where I learned to:
 
 - Separate **state** from **transition**.
-- Visualize sequences and think about ordering constraints.citeturn9search18  
+- Visualize sequences and think about ordering constraints. 
 
 ---
 
@@ -471,7 +471,7 @@ I use it when:
 
 ### 2.13 Segment Tree (Range Max + Point Update)
 
-One of the core data structures in CP.citeturn9search8  
+One of the core data structures in CP.
 
 ```cpp
 struct SegTree {
@@ -521,7 +521,7 @@ I treat segment tree as the “bridge” between normal arrays and truly advance
 
 This section is written for **new competitive programmers**, but even advanced contestants sometimes need the reminder.
 
-Ideas here are influenced by well-known guides such as USACO Guide, CP-Algorithms, and Codeforces practice blogs.citeturn9search2turn9search10turn9search14turn9search25  
+Ideas here are influenced by well-known guides such as USACO Guide, CP-Algorithms, and Codeforces practice blogs.
 
 ### 3.1 Core Principles
 
@@ -582,14 +582,14 @@ Use the **roadmap link** in the next section as your main guide and this repo as
 
 ## 4. Setting Up Sublime Text for Competitive Programming
 
-This is a compact version of how I configured Sublime Text for competitive programming, based on the FastOlympicCoding plugin and community blogs.citeturn9search3turn9search11turn9search19turn9search33  
+This is a compact version of how I configured Sublime Text for competitive programming, based on the FastOlympicCoding plugin and community blogs.
 
 ### 4.1 Tools You Need
 
 - **C++ compiler**: `g++` (from MinGW / MSYS2 / WSL, depending on your OS).
 - **Sublime Text 3 or 4**.
 - **FastOlympicCoding** plugin for Sublime.
-- (Optional but very useful) **FastOlympicCodingHook** + **Competitive Companion** browser extension for automatic test-case parsing.citeturn9search7  
+- (Optional but very useful) **FastOlympicCodingHook** + **Competitive Companion** browser extension for automatic test-case parsing. 
 
 ### 4.2 Install Sublime Text
 
@@ -702,9 +702,9 @@ Use it together with:
 Some of the best publicly available resources:
 
 - **CP-Algorithms (e-maxx translation)** – algorithm reference for CP  
-  👉 https://cp-algorithms.com citeturn9search12  
+  👉 https://cp-algorithms.com 
 - **USACO Guide** – structured roadmap + problems, not just for USACO  
-  👉 https://usaco.guide citeturn9search10  
+  👉 https://usaco.guide  
 - **CSES Problemset** – clean, well-structured problem list  
   👉 https://cses.fi/problemset  
 - **Codeforces** – my main place for contests & practice  
@@ -712,11 +712,11 @@ Some of the best publicly available resources:
 - **AtCoder** – very high-quality contests with good editorials  
   👉 https://atcoder.jp  
 - **VisuAlgo** – visualizations for many data structures / algorithms  
-  👉 https://visualgo.net/en citeturn9search14  
+  👉 https://visualgo.net/en 
 - **Competitive Programmer’s Handbook (free PDF)**  
-  👉 https://usaco.guide/CPH.pdf citeturn9search6  
+  👉 https://usaco.guide/CPH.pdf 
 
-Additionally, there are excellent Codeforces blogs about practice & mindset (Radewoosh, Um_nik, E869120, etc.).citeturn9search1turn9search5turn9search17turn9search31  
+Additionally, there are excellent Codeforces blogs about practice & mindset (Radewoosh, Um_nik, E869120, etc.).
 
 ---
 
