@@ -1,11 +1,7 @@
 # 🚀 Competitive Programming Notebook & Topic Library
 
-> Personal ICPC-style toolbox for algorithms, data structures, and contest workflow.  
-> Built in C++17, tested on Codeforces, AtCoder, and ICPC-style contests.
-
----
-
-![Competitive Programming Illustration](https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Competitive_programming_code_example.svg/512px-Competitive_programming_code_example.svg.png)
+> Personal toolbox for algorithms, data structures, and contest workflow.  
+> Built in C++17, tested on Codeforces, AtCoder, contests.
 
 ---
 
