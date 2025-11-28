@@ -725,7 +725,6 @@ Additionally, there are excellent Codeforces blogs about practice & mindset (Rad
 This repository shows:
 
 - Implementations of core algorithms and data structures that regularly appear in
-  - ICPC-style contests,
   - Codeforces rounds,
   - AtCoder contests,
   - and typical technical interview questions.
