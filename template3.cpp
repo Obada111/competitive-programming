@@ -62,7 +62,9 @@ ll modinv(ll a, ll mod = MOD) {
 }
 
 void solve() {
-    
+    int n; cin >> n ;
+    cout << n*3 <<endl;
+   
 }
 
 int main() {
